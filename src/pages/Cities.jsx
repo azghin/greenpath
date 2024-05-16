@@ -10,6 +10,7 @@ function Cities (){
     },[location])
     return(
         <main >
+            trejsadjh
         <Intro/>
         <NavCities/>
         </main>
