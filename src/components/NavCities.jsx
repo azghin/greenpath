@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import Gmap from "../layouts/Gmap";
 import { useState } from "react";
-
+import BoxMap from "../layouts/GMap";
 function NavCities() {
   const [dataCity, setDataCity] = useState({
     lat: 35.76016218600153,
@@ -9,6 +8,7 @@ function NavCities() {
     zoom: 6,
     name: "tanger",
   });
+  console.log(dataCity);
   const cities = [
     {
       lat: 33.56883816432362,
@@ -38,37 +38,29 @@ function NavCities() {
   return (
     <section id="SelectCity">
       <div className="container h-100">
-        <div className="row  h-100">
-          <div className="citieslist ">
-            <ul className="list-group">
-              {cities.map((city) => (
-                <Link to={`/${city.name}`}>
+        <div className="citieslist">
+          <ul >
+            {cities.map((city) => (
+              <Link to={`/${city.name}`} key={`${city.name}-1`}>
+                {" "}
+                <li
+                  
+                  id={`city-${city.name}`}
+                  
+                  onMouseEnter={() => handleHover(city)}
+                  onMouseLeave={outHover}
+                >
                   {" "}
-                  <li
-                    className="list-group-item"
-                    id={`city-${city.name}`}
-                    key={city.name}
-                    onMouseEnter={() => handleHover(city)}
-                    onMouseLeave={outHover}
-                  >
-                    {" "}
-                    <h3>{city.name}</h3>{" "}
-                  </li>
-                </Link>
-              ))}
-            </ul>
-          </div>
+                  <h3>{city.name}</h3>{" "}
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </div>
 
-          <div className="mapcity ">
-            {" "}
-            <Gmap
-              key={dataCity.name}
-              lat={dataCity.lat}
-              lng={dataCity.lng}
-              zoom={dataCity.zoom}
-              name={dataCity.name}
-            />{" "}
-          </div>
+        <div className="mapcity ">
+          {/* <GMap/> */}
+          <BoxMap/>
         </div>
       </div>
     </section>

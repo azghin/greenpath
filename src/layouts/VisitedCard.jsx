@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 function VisitedCard(props) {
   return (
     <div className="col-lg-4 col-sm-12 vcard">
-      <div className="card">
-        <div className="card-header">
+      <div className="card border-0">
+        <div className="card-header border-0">
           <h3>{props.city}</h3>
         </div>
-        <div class="card-body ">
+        <div className="card-body border-0">
           <div className="img ">
             <img src="" alt="City" />
           </div>
@@ -15,7 +16,7 @@ function VisitedCard(props) {
         </div>
         <div class="card-footer">
           <div>
-            <button className="btn-get-started scrollto"> More</button>
+          <Link to={`${props.city}`} >  <button className="btn-get-started scrollto"> More</button></Link>
           </div>
         </div>
       </div>

@@ -1,10 +1,17 @@
-import { useParams } from "react-router-dom"
+import { useParams,useLocation } from "react-router-dom"
+import { useEffect } from "react"
+import WelcomeCity from "../components/WelcomeCity";
+import NavPlaces from "../components/NavPlaces";
 function City(){
+    const location=useLocation();
+    useEffect(()=>{
+        window.scrollTo(1,1)
+    },[location])
     const cityname=useParams()
-    console.log(cityname)
     return(
         <main>
-            <h1> City {cityname.name}  </h1>
+            <WelcomeCity name={cityname.name}/>
+            <NavPlaces name={cityname.name}/>
         </main>
     )
 }

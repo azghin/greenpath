@@ -1,0 +1,52 @@
+[
+    {
+      "place": "Chefchaouen",
+      "city": "Chefchaouen",
+      "description": "The 'Blue Pearl' known for its vibrant blue-washed houses and narrow streets in the Rif Mountains."
+    },
+    {
+      "place": "Hassan II Mosque",
+      "city": "Casablanca",
+      "description": "One of the largest mosques in the world, featuring intricate tilework, a retractable roof, and stunning ocean views."
+    },
+    {
+      "place": "Jemaa el-Fnaa",
+      "city": "Marrakech",
+      "description": "A bustling central square in Marrakech, filled with food stalls, snake charmers, acrobats, and a variety of local performers."
+    },
+    {
+      "place": "Dades Gorges",
+      "city": "Boumalne Dades",
+      "description": "Dramatic canyons carved by the Dades River, offering scenic hikes, waterfalls, and kasbahs (traditional fortified villages)."
+    },
+    {
+      "place": "Volubilis",
+      "city": "Meknes",
+      "description": "Roman ruins of an ancient city, showcasing impressive mosaics, temples, and triumphal arches."
+    },
+    {
+      "place": "Erg Chebbi Sand Dunes",
+      "city": "Merzouga",
+      "description": "Vast desert landscape with towering sand dunes, popular for camel trekking and stargazing under clear skies."
+    },
+    {
+      "place": "Tinghir Todgha Gorge",
+      "city": "Tinghir",
+      "description": "A spectacular canyon with towering cliffs along the Todgha River, perfect for hiking and exploring."
+    },
+    {
+      "place": "Essaouira",
+      "city": "Essaouira",
+      "description": "A laid-back coastal town with beautiful beaches, a relaxed atmosphere, and a well-preserved medina (old town)."
+    },
+    {
+      "place": "Ouzoud Waterfalls",
+      "city": "Ouzoud",
+      "description": "The tallest waterfalls in Morocco, surrounded by lush greenery and offering breathtaking views."
+    },
+    {
+      "place": "Chefchaouen Kasbah",
+      "city": "Chefchaouen",
+      "description": "A 17th-century fortress with beautiful gardens and panoramic views of the blue-washed city."
+    }
+  ]

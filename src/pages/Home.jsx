@@ -3,6 +3,7 @@ import Hero from "../components/Hero"
 import Info from "../components/Info"
 import SliderImg from "../components/SliderImg"
 import VisitedCities from "../components/VisitedCities"
+import HStory from "../components/HStory"
 function Home (){
     return(
         <main >
@@ -11,6 +12,7 @@ function Home (){
             <SliderImg/>
             <Advices/>
             <VisitedCities/>
+            <HStory/>
             <h1>advices</h1>
             <h1>most visited cities</h1>
             <h1>most fav cities in app</h1>

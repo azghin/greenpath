@@ -6,6 +6,7 @@ body{
 }
 main{
   background: #fff;
+  min-height: 100vh;
 }
 a{
   color: #388E3C;
@@ -482,7 +483,6 @@ nav .logo h1{
   width: 100%;
   padding: 0 0 120px 0;
   display: flex;
-  background-color: #fff;
 
 }
 @media (max-width: 991px) {
@@ -515,6 +515,15 @@ nav .logo h1{
   color: #388E3C;
 }
 /*end Mostvisited*/
+/* ppl stories*/
+#Homestories{
+  width: 100%;
+  padding: 0 0 120px 0;
+}
+#Homestories .story-desc h3{
+  margin: 0;
+}
+
 /*paragraphs */
 section .centertext{
   text-align: center;
@@ -545,7 +554,7 @@ section .section-title{
 /*Nav Cities*/
 #SelectCity{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #fff;
   
 }
@@ -556,18 +565,32 @@ section .section-title{
   width: 50%;
   float: left;
   height: 100%;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-timeline: --listTimeline block;
 }
 #SelectCity .citieslist ul {
   height: 95%;
   width: 100%;
+  list-style: none;
 }
 
 #SelectCity .citieslist ul li {
-  list-style: none;
+  border-top: 1px solid #ccc;
+  scroll-snap-align: start;
+  margin: 10px 10px 10px 10px;
+}
+#SelectCity .citieslist ul li:first-child {
+  border: 0;
 }
 #SelectCity .citieslist ul li h3 {
   margin: 0;
-
+  font-size: 48px;
+}
+#SelectCity .citieslist ul  a {
+  color: black;
 }
 
 #SelectCity .mapcity {
@@ -586,12 +609,76 @@ section .section-title{
 }
 
 /*end NavCities*/
-/*Map*/
-.marker{
-  position: fixed;
-}
 /*open layers*/
+/*intro */
+#intro{
+  width: 100%;
+  padding: 100px 0 120px 0;
+}
+@media (max-width: 991px){
+  #intro{
+    padding: 140px 0 60px 0;
+  }
+  #intro .intro-img {
+    width: 80%;
+    float: none;
+    margin: 0 auto 25px auto;
+  }
+}
+@media (max-width: 574px){
+  #intro{
+    padding: 140px 0 20px 0;
+  }
+}
 
+#intro .intro-img{
+  width: 50%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#intro .intro-img img{
+  width: 80%;
+}
+#intro .intro-desc{
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  #intro .intro-desc {
+    width: 80%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  #intro .intro-desc {
+    width: 100%;
+  }
+}
+#intro .intro-desc h2 {
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  #intro .intro-desc h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+}
+#intro .intro-desc p{
+  line-height: 26px;
+}
+
+/*end intro*/
 
 /*footer */
 #footer{
