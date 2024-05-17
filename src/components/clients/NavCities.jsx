@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Gmap from "../../layouts/clients/Gmap";
 function NavCities() {
   const [dataCity, setDataCity] = useState({
-    lat: 35.76016218600153,
-    lng: -5.833817485629532,
-    zoom: 6,
-    name: "tanger",
+    lat: 29.71138072361799,
+    lng: -8.714060252932148,
+    zoom: 5,
+    name:'Morocco'
   });
   const cities = [
     {
@@ -27,10 +28,10 @@ function NavCities() {
   };
   const outHover = () => {
     setDataCity({
-      lat: 35.76016218600153,
-      lng: -5.833817485629532,
-      zoom: 6,
-      name: "tanger",
+      lat: 29.71138072361799,
+      lng: -8.714060252932148,
+      zoom: 5,
+      name: "Morocco",
     });
   };
   return (
@@ -39,7 +40,7 @@ function NavCities() {
         <div className="citieslist">
           <ul >
             {cities.map((city) => (
-              <Link to={`/${city.name}`} key={`${city.name}-1`}>
+              <Link to={`/client/city/${city.name}`} key={`${city.name}-1`}>
                 {" "}
                 <li
                   
@@ -56,7 +57,8 @@ function NavCities() {
           </ul>
         </div>
 
-        <div className="mapcity ">
+        <div className="mapcity " >
+          <Gmap data={dataCity} city={true}  />
         </div>
       </div>
     </section>

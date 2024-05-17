@@ -604,16 +604,18 @@ section .section-title{
 }
 #SelectCity .mapcity .googlemap{
   box-shadow: 10px 10px black;
-  height: 680px;
+  height: 90%;
   width: 90%;
 }
 
 /*end NavCities*/
-/*open layers*/
+
 /*intro */
 #intro{
   width: 100%;
   padding: 100px 0 120px 0;
+  background: url("../components/img/wave.svg")center bottom no-repeat;
+  background-size: cover;
 }
 @media (max-width: 991px){
   #intro{
@@ -685,6 +687,7 @@ section .section-title{
   padding: 0 0 30px 0;
   color: #eee;
   font-size: 14px;
+  background-color: #006219;
 }
 #footer .copyright {
   text-align: center;

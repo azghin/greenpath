@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App" >
 
-      {isAdmin ? 'nop ' : <Client/>}
+      {isAdmin ? <h1>admin</h1> : <Client/>}
     </div>
   );
 }
