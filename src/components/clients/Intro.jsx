@@ -1,4 +1,4 @@
-import img from "./img/info-img.svg";
+import img from "../img/info-img.svg";
 function Intro() {
   return (
     <section id="intro" className="clearfix">

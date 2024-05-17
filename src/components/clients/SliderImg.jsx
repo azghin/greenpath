@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
-import Slide from '../layouts/Slide';
+import Slide from '../../layouts/clients/Slide';
 
 function SliderImg() {
   return (

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import BoxMap from "../layouts/GMap";
 function NavCities() {
   const [dataCity, setDataCity] = useState({
     lat: 35.76016218600153,
@@ -8,7 +7,6 @@ function NavCities() {
     zoom: 6,
     name: "tanger",
   });
-  console.log(dataCity);
   const cities = [
     {
       lat: 33.56883816432362,
@@ -20,7 +18,7 @@ function NavCities() {
       lat: 31.61687337033625,
       lng: -7.987592416193535,
       zoom: 8,
-      name: "marakesh",
+      name: "Marrakech",
     },
   ];
   const handleHover = (city) => {
@@ -59,8 +57,6 @@ function NavCities() {
         </div>
 
         <div className="mapcity ">
-          {/* <GMap/> */}
-          <BoxMap/>
         </div>
       </div>
     </section>

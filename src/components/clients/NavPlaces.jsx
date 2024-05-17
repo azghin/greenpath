@@ -1,4 +1,4 @@
-import Places from "../Data/Places.json";
+import Places from "../../Data/Places.json";
 import { useState, useEffect } from "react";
 export default function NavPlaces(props) {
   const [cityPlaces, setCityPlace] = useState([]);

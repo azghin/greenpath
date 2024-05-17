@@ -1,36 +1,31 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Navbar from "./layouts/Navbar";
-import Cities from "./pages/Cities";
-import City from "./pages/City";
-
-// importing bootstrap 
+// import { Route, Routes } from "react-router-dom";
+import Client from './pages/Client'
+// importing bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-// importing css
-import "./css/App.css"
-import Footer from "./layouts/Footer";
-//importing Barba
+import { useParams } from 'react-router-dom';
+
+
 
 function App() {
-  
+  const params = useParams();
+  // console.log(params)
+  const isAdmin = isUserAdmin(params);
   return (
     <div className="App" >
-      {/* Navigation bar  */}
 
-      <Navbar />
-
-      {/* add Routes here */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cities" element={<Cities/>}/>
-        <Route path="/:name" element={<City/>} />
-      </Routes>
-      <Footer/>
+      {isAdmin ? 'nop ' : <Client/>}
     </div>
   );
+}
+function isUserAdmin(params){
+  // if(params)
+    if(params==='admin'){
+      return true
+    }else return false
+
 }
 
 export default App;

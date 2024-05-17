@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroimg from './img/hero-img.svg'
+import heroimg from '../img/hero-img.svg'
 function Hero(){
     return(
         <section id="hero" className='clearfix'>

@@ -23,7 +23,7 @@ function Navbar(){
                 <div className="navbar" id="navbar">
                     <ul>
                         <li><Link to="/" className="nav-link scrollto">Home</Link></li>
-                        <li><Link to="/cities" className="nav-link scrollto">Cities</Link></li>
+                        <li><Link to="/client/cities" className="nav-link scrollto">Cities</Link></li>
                         <li><Link to="/" className="nav-link scrollto">Green Path</Link></li>
                         <li><Link to="/" className="nav-link scrollto">Green Path</Link></li>
                     </ul>

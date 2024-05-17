@@ -1,4 +1,4 @@
-import VisitedCard from "../layouts/VisitedCard";
+import VisitedCard from "../../layouts/clients/VisitedCard";
 
 function VisitedCities(){
     return(

@@ -1,5 +1,5 @@
-import Intro from "../components/Intro"
-import NavCities from "../components/NavCities"
+import Intro from "../../components/clients/Intro"
+import NavCities from "../../components/clients/NavCities"
 import { useLocation  } from "react-router-dom"
 import { useEffect } from "react"
 

@@ -1,4 +1,5 @@
-import StoryCard from "../layouts/StoryCard";
+import StoryCard from "../../layouts/clients/StoryCard"
+
 
 function HStory(){
     return(

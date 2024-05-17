@@ -1,9 +1,9 @@
-import Advices from "../components/Advices"
-import Hero from "../components/Hero"
-import Info from "../components/Info"
-import SliderImg from "../components/SliderImg"
-import VisitedCities from "../components/VisitedCities"
-import HStory from "../components/HStory"
+import Advices from "../../components/clients/Advices"
+import Hero from "../../components/clients/Hero"
+import Info from "../../components/clients/Info"
+import SliderImg from "../../components/clients/SliderImg"
+import VisitedCities from "../../components/clients/VisitedCities"
+import HStory from "../../components/clients/HStory"
 function Home (){
     return(
         <main >

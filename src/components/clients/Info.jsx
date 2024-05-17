@@ -1,5 +1,5 @@
-import infoImg from "./img/info-img.svg";
-import descImg from "./img/Digital nomad-bro.svg";
+import infoImg from "../img/info-img.svg";
+import descImg from "../img/Digital nomad-bro.svg";
 function Info() {
   return (
     <section id="info" className="clearfix">
