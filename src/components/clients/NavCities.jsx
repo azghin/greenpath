@@ -23,8 +23,8 @@ function NavCities() {
     },
   ];
   const handleHover = (city) => {
-    const clickedValue = city; // Parse the stored JSON value
-    setDataCity(clickedValue);
+    const hoveredValue = city; // Parse the stored JSON value
+    setDataCity(hoveredValue);
   };
   const outHover = () => {
     setDataCity({
@@ -40,7 +40,7 @@ function NavCities() {
         <div className="citieslist">
           <ul >
             {cities.map((city) => (
-              <Link to={`/client/city/${city.name}`} key={`${city.name}-1`}>
+              <Link to={`/client/city/${city.name}`} key={`${city.name}`}>
                 {" "}
                 <li
                   
@@ -58,7 +58,7 @@ function NavCities() {
         </div>
 
         <div className="mapcity " >
-          <Gmap data={dataCity} city={true}  />
+          <Gmap data={dataCity} city={true}   />
         </div>
       </div>
     </section>

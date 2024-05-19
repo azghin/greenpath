@@ -1,5 +1,6 @@
 import Places from "../../Data/Places.json";
 import { useState, useEffect } from "react";
+// import Gmap from "../../layouts/clients/Gmap";
 export default function NavPlaces(props) {
   const [cityPlaces, setCityPlace] = useState([]);
   const cityName = props.name.toString();
@@ -37,7 +38,9 @@ export default function NavPlaces(props) {
           )}
           
         </div>
-        <div className="mapPlaces">Map</div>
+        <div className="mapPlaces">
+          {/* <Gmap city={true}  data={cityPlaces[0].name}  /> */}
+        </div>
       </div>
     </section>
   );

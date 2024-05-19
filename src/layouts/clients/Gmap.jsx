@@ -2,13 +2,13 @@ import { APIProvider, Map ,AdvancedMarker, Pin} from "@vis.gl/react-google-maps"
 import { useState,useEffect } from "react";
 
 export default function Gmap(props) {
+  const [country,setCountry]=useState('Morocco')
     const [center,setCenter]=useState({
         lat: 29.71138072361799,
     lng: -8.714060252932148,
     zoom: 5,
     name:'Morocco'
     });
-    const [country,setCountry]=useState('Morocco')
     useEffect(()=>{
         setCenter(props.data)
         setCountry(props.data.name)
@@ -25,8 +25,8 @@ export default function Gmap(props) {
       >
         <Map
           style={{ width: "100%", height: "100%" }}
-          defaultCenter={{ lat: 29.71138072361799 , lng: -8.714060252932148 }}
-          defaultZoom={5}
+          defaultCenter={{ lat: center.lat , lng: center.lng }}
+          defaultZoom={center.zoom}
           gestureHandling={"greedy"}
           disableDefaultUI={true}
           mapId={'921104f6dd1bfaa2'}
