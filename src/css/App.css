@@ -565,11 +565,6 @@ section .section-title{
   width: 50%;
   float: left;
   height: 100%;
-  scroll-snap-type: y mandatory;
-  overscroll-behavior-y: contain;
-  overflow-x: hidden;
-  overflow-y: auto;
-  scroll-timeline: --listTimeline block;
 }
 #SelectCity .citieslist ul {
   height: 95%;
@@ -609,6 +604,46 @@ section .section-title{
 }
 
 /*end NavCities*/
+
+/*Nav Places*/
+#NavPlaces{
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+}
+#NavPlaces .container{
+  height: 100%;
+}
+#NavPlaces .list-places{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+#NavPlaces .list-places ul {
+  height: 95%;
+  width: 100%;
+  list-style: none;
+}
+
+#NavPlaces .mapPlaces {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  width: 50%;
+  float: right;
+  height:100% ;
+}
+#NavPlaces .mapPlaces .googlemap{
+  box-shadow: 10px 10px black;
+  height: 90%;
+  width: 90%;
+}
+
+/*end nav Places*/
 
 /*intro */
 #intro{

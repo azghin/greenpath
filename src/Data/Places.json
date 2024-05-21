@@ -1,52 +1,82 @@
 [
-    {
-      "place": "Chefchaouen",
-      "city": "Chefchaouen",
-      "description": "The 'Blue Pearl' known for its vibrant blue-washed houses and narrow streets in the Rif Mountains."
-    },
-    {
-      "place": "Hassan II Mosque",
-      "city": "Casablanca",
-      "description": "One of the largest mosques in the world, featuring intricate tilework, a retractable roof, and stunning ocean views."
-    },
-    {
-      "place": "Jemaa el-Fnaa",
-      "city": "Marrakech",
-      "description": "A bustling central square in Marrakech, filled with food stalls, snake charmers, acrobats, and a variety of local performers."
-    },
-    {
-      "place": "Dades Gorges",
-      "city": "Boumalne Dades",
-      "description": "Dramatic canyons carved by the Dades River, offering scenic hikes, waterfalls, and kasbahs (traditional fortified villages)."
-    },
-    {
-      "place": "Volubilis",
-      "city": "Meknes",
-      "description": "Roman ruins of an ancient city, showcasing impressive mosaics, temples, and triumphal arches."
-    },
-    {
-      "place": "Erg Chebbi Sand Dunes",
-      "city": "Merzouga",
-      "description": "Vast desert landscape with towering sand dunes, popular for camel trekking and stargazing under clear skies."
-    },
-    {
-      "place": "Tinghir Todgha Gorge",
-      "city": "Tinghir",
-      "description": "A spectacular canyon with towering cliffs along the Todgha River, perfect for hiking and exploring."
-    },
-    {
-      "place": "Essaouira",
-      "city": "Essaouira",
-      "description": "A laid-back coastal town with beautiful beaches, a relaxed atmosphere, and a well-preserved medina (old town)."
-    },
-    {
-      "place": "Ouzoud Waterfalls",
-      "city": "Ouzoud",
-      "description": "The tallest waterfalls in Morocco, surrounded by lush greenery and offering breathtaking views."
-    },
-    {
-      "place": "Chefchaouen Kasbah",
-      "city": "Chefchaouen",
-      "description": "A 17th-century fortress with beautiful gardens and panoramic views of the blue-washed city."
-    }
+  {
+    "place": "Chefchaouen",
+    "city": "Chefchaouen",
+    "description": "The 'Blue Pearl' known for its vibrant blue-washed houses and narrow streets in the Rif Mountains.",
+    "name": "Chefchaouen",
+    "lat": 35.1734,
+    "lng": -5.2798
+  },
+  {
+    "place": "Hassan II Mosque",
+    "city": "Casablanca",
+    "description": "One of the largest mosques in the world, featuring intricate tilework, a retractable roof, and stunning ocean views.",
+    "name": "Hassan II Mosque",
+    "lat": 33.5928,
+    "lng": -7.6184
+  },
+  {
+    "place": "Jemaa el-Fnaa",
+    "city": "Marrakech",
+    "description": "A bustling central square in Marrakech, filled with food stalls, snake charmers, acrobats, and a variety of local performers.",
+    "name": "Jemaa el-Fnaa",
+    "lat": 31.6298,
+    "lng": -9.9986
+  },
+  {
+    "place": "Dades Gorges",
+    "city": "Boumalne Dades",
+    "description": "Dramatic canyons carved by the Dades River, offering scenic hikes, waterfalls, and kasbahs (traditional fortified villages).",
+    "name": "Dades Gorges",
+    "lat": 31.5667,
+    "lng": -5.5333
+  },
+  {
+    "place": "Volubilis",
+    "city": "Meknes",
+    "description": "Roman ruins of an ancient city, showcasing impressive mosaics, temples, and triumphal arches.",
+    "name": "Volubilis",
+    "lat": 34.0911,
+    "lng": -5.5433
+  },
+  {
+    "place": "Erg Chebbi Sand Dunes",
+    "city": "Merzouga",
+    "description": "Vast desert landscape with towering sand dunes, popular for camel trekking and stargazing under clear skies.",
+    "name": "Erg Chebbi Sand Dunes",
+    "lat": 30.9922,
+    "lng": -5.2778
+  },
+  {
+    "place": "Tinghir Todgha Gorge",
+    "city": "Tinghir",
+    "description": "A spectacular canyon with towering cliffs along the Todgha River, perfect for hiking and exploring.",
+    "name": "Tinghir Todgha Gorge",
+    "lat": 31.6333,
+    "lng": -5.5333
+  },
+  {
+    "place": "Essaouira",
+    "city": "Essaouira",
+    "description": "A laid-back coastal town with beautiful beaches, a relaxed atmosphere, and a well-preserved medina (old town).",
+    "name": "Essaouira",
+    "lat": 31.5014,
+    "lng": -9.7903
+  },
+  {
+    "place": "Ouzoud Waterfalls",
+    "city": "Ouzoud",
+    "description": "The tallest waterfalls in Morocco, surrounded by lush greenery and offering breathtaking views.",
+    "name": "Ouzoud Waterfalls",
+    "lat": 31.6333,
+    "lng": -6.8833
+  },
+  {
+    "place": "Chefchaouen Kasbah",
+    "city": "Chefchaouen",
+    "description": "A 17th-century fortress with beautiful gardens and panoramic views of the blue-washed city.",
+    "name": "Chefchaouen Kasbah",
+    "lat": 35.1750,
+    "lng": -5.2811
+  }
   ]

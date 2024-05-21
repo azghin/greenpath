@@ -1,33 +1,29 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Gmap from "../../layouts/clients/Gmap";
+import Cities from '../../Data/Cities.json'
 function NavCities() {
-  const [dataCity, setDataCity] = useState({
+  const [DefaultCenter, setDefaultCenter] = useState({
     lat: 29.71138072361799,
     lng: -8.714060252932148,
     zoom: 5,
     name:'Morocco'
   });
-  const cities = [
-    {
-      lat: 33.56883816432362,
-      lng: -7.594107258405521,
-      zoom: 8,
-      name: "casa",
-    },
-    {
-      lat: 31.61687337033625,
-      lng: -7.987592416193535,
-      zoom: 8,
-      name: "Marrakech",
-    },
-  ];
+  const [cities, setCities]=useState([])
+  useEffect(()=>{
+    let newCities=[];
+    for(let i=0;i<Cities.length;i++){
+      newCities=[...newCities,Cities[i]]
+    }
+    setCities(newCities)
+  },[])
+
   const handleHover = (city) => {
     const hoveredValue = city; // Parse the stored JSON value
-    setDataCity(hoveredValue);
+    setDefaultCenter(hoveredValue);
   };
   const outHover = () => {
-    setDataCity({
+    setDefaultCenter({
       lat: 29.71138072361799,
       lng: -8.714060252932148,
       zoom: 5,
@@ -58,7 +54,7 @@ function NavCities() {
         </div>
 
         <div className="mapcity " >
-          <Gmap data={dataCity} city={true}   />
+          <Gmap data={DefaultCenter} city={true}   />
         </div>
       </div>
     </section>
