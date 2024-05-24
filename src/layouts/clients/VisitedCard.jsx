@@ -14,7 +14,7 @@ function VisitedCard(props) {
             <p>content</p>
           </div>
         </div>
-        <div class="card-footer">
+        <div className="card-footer">
           <div>
           <Link to={`${props.city}`} >  <button className="btn-get-started scrollto"> More</button></Link>
           </div>
