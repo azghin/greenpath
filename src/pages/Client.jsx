@@ -8,6 +8,7 @@ import Footer from "../layouts/clients/Footer";
 import Navbar from "../layouts/clients/Navbar";
 
 import "../css/App.css";
+import Place from "./client/Place";
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/client/cities" element={<Cities/>}/>
         <Route path="/client/city/:name" element={<City/>} />
+        <Route path="/client/city/:name/:place" element={<Place/>} />
       </Routes>
       <Footer/>
     </main>

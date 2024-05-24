@@ -26,8 +26,8 @@ export default function Gmap(props) {
       <APIProvider region="ma" apiKey={apikey}>
         <Map
           style={{ width: "100%", height: "100%" }}
-          defaultCenter={{ lat: center.lat, lng: center.lng }}
-          defaultZoom={center.zoom}
+          center={{ lat: center.lat, lng: center.lng }}
+          zoom={center.zoom}
           gestureHandling={"greedy"}
           disableDefaultUI={true}
           mapId={"921104f6dd1bfaa2"}

@@ -2,37 +2,37 @@
     {
       "lat": 33.573333,
       "lng": -7.6,
-      "zoom": 8,
+      "zoom": 10,
       "name": "Casablanca"
     },
     {
       "lat": 34.0209,
       "lng": -6.8416,
-      "zoom": 8,
+      "zoom": 10,
       "name": "Rabat"
     },
     {
       "lat": 31.6300,
       "lng": -8.0089,
-      "zoom": 8,
+      "zoom": 10,
       "name": "Marrakech"
     },
     {
       "lat": 35.7767,
       "lng": -5.8039,
-      "zoom": 8,
+      "zoom": 10,
       "name": "Tangier"
     },
     {
       "lat": 33.8950,
       "lng": -5.5547,
-      "zoom": 8,
+      "zoom": 10,
       "name": "Meknes"
     },
     {
       "lat": 30.4333,
       "lng": -9.6000,
-      "zoom": 8,
+      "zoom": 10,
       "name": "Agadir"
     }
   ]

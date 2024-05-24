@@ -1,24 +1,38 @@
 import Places from "../../Data/Places.json";
 import Cities from "../../Data/Cities.json";
-import { useState, useEffect } from "react";
-import Gmap from "../../layouts/clients/Gmap";
+import { useState, useEffect, lazy, Suspense } from "react";
+const Gmap =  lazy(() => import("../../layouts/clients/Gmap"));
+
 export default function NavPlaces(props) {
   const [DefaultCity, setDefaultCity] = useState();
   const [DefaultCenter, setDefaultCenter] = useState({});
-
   const [cityPlaces, setCityPlace] = useState([]);
+
   const cityName = props.name.toString();
-
-  useEffect(() => {
-    const newCity = Cities.find((city) => city.name === cityName);
-
-    if (newCity) {
-      setDefaultCenter(newCity);
-      setDefaultCity(newCity);
-    } else {
-      console.warn(`City "${cityName}" not found in Cities data.`);
+  const newCity = Cities.find((city) => city.name === cityName);
+  
+  useEffect(()=>{
+    if(newCity){
+      setDefaultCity(newCity)
     }
-  }, [cityName]);
+  },[newCity])
+
+
+  useEffect(()=>{
+    if(DefaultCity){
+      setDefaultCenter(DefaultCity)
+    }
+  },[DefaultCity])
+  console.log(DefaultCity)
+  // useEffect(() => {
+  //   if (newCity) {
+  //     setDefaultCenter(newCity);
+  //     setDefaultCity(newCity);
+  //   } else {
+  //     console.warn(`City "${cityName}" not found in Cities data.`);
+  //   }
+
+  // }, [cityName, newCity]);
   useEffect(() => {
     let newPlaces = [];
     for (let i = 0; i < Places.length; i++) {
@@ -34,24 +48,27 @@ export default function NavPlaces(props) {
     }
   }, [cityName]);
 
-  const HandleHover = () => {
-    setDefaultCenter(DefaultCity);
+  const HandleHover = (placeCity) => {
+    const HoveredValue = placeCity
+    setDefaultCenter(HoveredValue);
+
   };
-  const outHover = useEffect(() => {
-    const newCity = Cities.find((city) => city.name === cityName);
-    setDefaultCenter(newCity);
-  }, [cityName]);
+  // const outHover = useEffect(() => {
+  //   const mainCity=DefaultCity;
+  //   setDefaultCenter(mainCity);
+  //   console.log(DefaultCenter)
+  // }, [cityName,DefaultCity]);
   return (
     <section id="NavPlaces" className="clearfix">
+      
       <div className="container h-100">
         <div className="list-places ">
-          <h2>in {props.name} you'll find </h2>
+          {/* <h2>in {DefaultCity.name} you'll find </h2> */}
           {Array.isArray(cityPlaces) ? (
             <ul>
               {cityPlaces.map((placeCity) => (
                 <li
                   key={placeCity.place}
-                  // onMouseLeave={outHover}
                   onMouseEnter={() => {
                     HandleHover(placeCity);
                   }}
@@ -66,9 +83,14 @@ export default function NavPlaces(props) {
           )}
         </div>
         <div className="mapPlaces">
-          <Gmap city={true} data={DefaultCenter} />
+          <Suspense fallback={<div>loading</div>}>
+            <Gmap city={true} data={DefaultCenter} />
+          </Suspense>
+          
         </div>
       </div>
     </section>
   );
 }
+
+

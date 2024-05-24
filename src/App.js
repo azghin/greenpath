@@ -1,30 +1,31 @@
-// import { Route, Routes } from "react-router-dom";
-import Client from './pages/Client'
-// importing bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Suspense, lazy } from "react";
+import { useLocation } from 'react-router-dom';
 
-import { useParams } from 'react-router-dom';
 
+const Admin = lazy(()=>import('./pages/Admin'))
+const Client = lazy(() => import('./pages/Client'))
 
 
 function App() {
-  const params = useParams();
+  const Location=useLocation().pathname;
+  console.log(Location)
   // console.log(params)
-  const isAdmin = isUserAdmin(params);
+  const isAdmin = isUserAdmin(Location);
   return (
     <div className="App" >
 
-      {isAdmin ? <h1>admin</h1> : <Client/>}
+      {isAdmin ? <Admin /> : <Suspense>  <Client /></Suspense>}
     </div>
   );
 }
-function isUserAdmin(params){
+function isUserAdmin(params) {
   // if(params)
-    if(params==='admin'){
-      return true
-    }else return false
+  if (params === '/admin') {
+    return true
+  } else return false
 
 }
 
