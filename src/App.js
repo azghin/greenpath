@@ -11,8 +11,6 @@ const Client = lazy(() => import('./pages/Client'))
 
 function App() {
   const Location=useLocation().pathname;
-  console.log(Location)
-  // console.log(params)
   const isAdmin = isUserAdmin(Location);
   return (
     <div className="App" >
@@ -23,7 +21,8 @@ function App() {
 }
 function isUserAdmin(params) {
   // if(params)
-  if (params === '/admin') {
+   const Admin=params.split('/')[1];
+  if (Admin === 'admin') {
     return true
   } else return false
 
