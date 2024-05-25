@@ -17,7 +17,7 @@ function Home() {
     },[location])
 
   return (
-    <main>
+    <>
       <Suspense fallback={<div>loading</div>}>
         <Hero />
       </Suspense>
@@ -41,7 +41,7 @@ function Home() {
       <h1>most visited cities</h1>
       <h1>most fav cities in app</h1>
       <h1>some of the stories</h1>
-    </main>
+    </>
   );
 }
 export default Home;

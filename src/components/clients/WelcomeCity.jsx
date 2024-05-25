@@ -1,8 +1,10 @@
-export default function WelcomeCity(props){
+import { useLocation } from "react-router-dom"
+export default function WelcomeCity(){
+    const CityName=useLocation().pathname.split('/').pop()
     return(
         <section className="WCity">
             <div className="container">
-                <h3> you're now navigating {props.name} </h3>
+                <h3> you're now navigating {CityName}  </h3>
             </div>
         </section>
     )

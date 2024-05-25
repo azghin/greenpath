@@ -13,10 +13,13 @@ import Place from "./client/Place";
 function App() {
   
   return (
+    <>
+    
+    <Navbar />
     <main >
       {/* Navigation bar  */}
 
-      <Navbar />
+      
 
       {/* add Routes here */}
       <Routes>
@@ -25,8 +28,10 @@ function App() {
         <Route path="/client/city/:name" element={<City/>} />
         <Route path="/client/city/:name/:place" element={<Place/>} />
       </Routes>
-      <Footer/>
+      
     </main>
+    <Footer/>
+    </>
   );
 }
 

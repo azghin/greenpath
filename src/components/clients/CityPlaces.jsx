@@ -35,7 +35,11 @@ function CityPlaces() {
     }
     return (
         <section id="NavPlaces">
+            <div className="container">
+
+            
             <div className="list-places">
+            
                 <h2>{DefaultCity.name}</h2>
 
                 {Array.isArray(PlacesOfCity) && PlacesOfCity.length > 0 ? (
@@ -59,6 +63,7 @@ function CityPlaces() {
             <div className="mapPlaces">
                 {typeof DefaultCity.name === 'string' ? <Gmap data={DefaultCenter} /> : <h2>Loading</h2>}
 
+            </div>
             </div>
 
         </section>
