@@ -726,6 +726,33 @@ section .section-title{
 
 /*end intro*/
 
+/*Place */
+#place{
+  width: 100%;
+  padding: 200px 0 120px 0;
+}
+#place .place-svg{
+  width: 50%;
+  float: right;
+}
+
+#place .placeIntro{
+  width: 50%;
+  float: left;
+}
+#place .placeIntro h2{
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+}
+#place .placeIntro h2 span{
+  color: #388E3C;
+  text-decoration: underline;
+}
+
+
+
+/*end place*/
 /*scrool container*/
 .scroll-container{
   min-height: auto;
