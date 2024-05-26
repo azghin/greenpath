@@ -27,14 +27,16 @@ export default function Gmap(props) {
         <Map
           style={{ width: "100%", height: "100%" }}
           center={{ lat: center.lat, lng: center.lng }}
+          defaultCenter={{lat:center.lat,lng:center.lng}}
           zoom={center.zoom}
+          defaultZoom={center.zoom}
           gestureHandling={"greedy"}
           disableDefaultUI={true}
           mapId={"921104f6dd1bfaa2"}
           
         >
           {isMorocco ? (
-            console.log("we can't pin morocco")
+            null
           ) : (
             <AdvancedMarker position={{ lat: center.lat, lng: center.lng }}>
               <Pin

@@ -39,11 +39,8 @@ function CityPlaces() {
 
             
             <div className="list-places">
-            
-                <h2>{DefaultCity.name}</h2>
-
                 {Array.isArray(PlacesOfCity) && PlacesOfCity.length > 0 ? (
-                    <ul>
+                    <ul className="scroll-container">
                         {PlacesOfCity.map((placeCity) => (
                             <li
                                 key={placeCity.place}

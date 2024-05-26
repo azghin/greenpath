@@ -6,6 +6,7 @@ body{
 }
 main{
   background: #fff;
+  height: 100%;
   min-height: 100vh;
 }
 a{
@@ -24,6 +25,11 @@ p{
 h1,h2,h3,h4,h5,h6{  
   font-weight: 400;
   margin: 0 0 20px 0;
+  padding: 0;
+}
+h5{  
+  font-weight: 400;
+  margin: 0 0 15px 0;
   padding: 0;
 }
 
@@ -560,6 +566,7 @@ section .section-title{
 }
 #SelectCity .citieslist{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
@@ -622,8 +629,10 @@ section .section-title{
   height: 100%;
   float: left;
 }
+
 #NavPlaces .list-places ul {
-  height: 95%;
+  max-height: 95%;
+  /* height: 95%; */
   width: 100%;
   list-style: none;
 }
@@ -717,6 +726,15 @@ section .section-title{
 
 /*end intro*/
 
+/*scrool container*/
+.scroll-container{
+  min-height: auto;
+  max-height: 100%;
+  overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            /* box-shadow: 10px 10px  black; */
+}
 /*footer */
 #footer{
   padding: 0 0 30px 0;

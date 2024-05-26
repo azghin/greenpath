@@ -5,7 +5,8 @@
     "description": "The 'Blue Pearl' known for its vibrant blue-washed houses and narrow streets in the Rif Mountains.",
     "name": "Chefchaouen",
     "lat": 35.1734,
-    "lng": -5.2798
+    "lng": -5.2798,
+    "zoom": 18
   },
   {
     "place": "Hassan II Mosque",
@@ -13,7 +14,8 @@
     "description": "One of the largest mosques in the world, featuring intricate tilework, a retractable roof, and stunning ocean views.",
     "name": "Hassan II Mosque",
     "lat": 33.5928,
-    "lng": -7.6184
+    "lng": -7.6184,
+    "zoom": 18
   },
   {
     "place": "Jemaa el-Fnaa",
@@ -21,7 +23,8 @@
     "description": "A bustling central square in Marrakech, filled with food stalls, snake charmers, acrobats, and a variety of local performers.",
     "name": "Jemaa el-Fnaa",
     "lat": 31.6298,
-    "lng": -9.9986
+    "lng": -9.9986,
+    "zoom": 18
   },
   {
     "place": "Dades Gorges",
@@ -29,7 +32,8 @@
     "description": "Dramatic canyons carved by the Dades River, offering scenic hikes, waterfalls, and kasbahs (traditional fortified villages).",
     "name": "Dades Gorges",
     "lat": 31.5667,
-    "lng": -5.5333
+    "lng": -5.5333,
+    "zoom": 18
   },
   {
     "place": "Volubilis",
@@ -37,7 +41,8 @@
     "description": "Roman ruins of an ancient city, showcasing impressive mosaics, temples, and triumphal arches.",
     "name": "Volubilis",
     "lat": 34.0911,
-    "lng": -5.5433
+    "lng": -5.5433,
+    "zoom": 18
   },
   {
     "place": "Erg Chebbi Sand Dunes",
@@ -45,7 +50,8 @@
     "description": "Vast desert landscape with towering sand dunes, popular for camel trekking and stargazing under clear skies.",
     "name": "Erg Chebbi Sand Dunes",
     "lat": 30.9922,
-    "lng": -5.2778
+    "lng": -5.2778,
+    "zoom": 18
   },
   {
     "place": "Tinghir Todgha Gorge",
@@ -53,7 +59,8 @@
     "description": "A spectacular canyon with towering cliffs along the Todgha River, perfect for hiking and exploring.",
     "name": "Tinghir Todgha Gorge",
     "lat": 31.6333,
-    "lng": -5.5333
+    "lng": -5.5333,
+    "zoom": 18
   },
   {
     "place": "Essaouira",
@@ -61,7 +68,8 @@
     "description": "A laid-back coastal town with beautiful beaches, a relaxed atmosphere, and a well-preserved medina (old town).",
     "name": "Essaouira",
     "lat": 31.5014,
-    "lng": -9.7903
+    "lng": -9.7903,
+    "zoom": 18
   },
   {
     "place": "Ouzoud Waterfalls",
@@ -69,14 +77,277 @@
     "description": "The tallest waterfalls in Morocco, surrounded by lush greenery and offering breathtaking views.",
     "name": "Ouzoud Waterfalls",
     "lat": 31.6333,
-    "lng": -6.8833
+    "lng": -6.8833,
+    "zoom": 18
   },
   {
     "place": "Chefchaouen Kasbah",
     "city": "Chefchaouen",
     "description": "A 17th-century fortress with beautiful gardens and panoramic views of the blue-washed city.",
     "name": "Chefchaouen Kasbah",
-    "lat": 35.1750,
-    "lng": -5.2811
+    "lat": 35.175,
+    "lng": -5.2811,
+    "zoom": 18
+  },
+  {
+    "place": "Ait Benhaddou",
+    "city": "Ouarzazate",
+    "description": "A historic fortified village made of earthen clay buildings, often used as a filming location for movies.",
+    "name": "Ait Benhaddou",
+    "lat": 31.047,
+    "lng": -7.1305,
+    "zoom": 18
+  },
+  {
+    "place": "Majorelle Garden",
+    "city": "Marrakech",
+    "description": "A botanical garden and artist's landscape garden with exotic plants and vibrant blue buildings.",
+    "name": "Majorelle Garden",
+    "lat": 31.6392,
+    "lng": -8.0083,
+    "zoom": 18
+  },
+  {
+    "place": "Kasbah of the Udayas",
+    "city": "Rabat",
+    "description": "A historic kasbah in Rabat with narrow streets, Andalusian gardens, and views of the Bou Regreg river.",
+    "name": "Kasbah of the Udayas",
+    "lat": 34.0273,
+    "lng": -6.8326,
+    "zoom": 18
+  },
+  {
+    "place": "Sahara Desert",
+    "city": "M'Hamid El Ghizlane",
+    "description": "Expansive desert offering camel treks, sandboarding, and the experience of traditional Berber camps.",
+    "name": "Sahara Desert",
+    "lat": 29.8225,
+    "lng": -5.72,
+    "zoom": 18
+  },
+  {
+    "place": "El Badi Palace",
+    "city": "Marrakech",
+    "description": "Ruins of a magnificent palace built in the 16th century, showcasing Moroccan architecture and history.",
+    "name": "El Badi Palace",
+    "lat": 31.6194,
+    "lng": -7.9833,
+    "zoom": 18
+  },
+  {
+    "place": "Menara Gardens",
+    "city": "Marrakech",
+    "description": "Historic public gardens with olive groves, a large pool, and a pavilion overlooking the Atlas Mountains.",
+    "name": "Menara Gardens",
+    "lat": 31.6138,
+    "lng": -8.0212,
+    "zoom": 18
+  },
+  {
+    "place": "Koutoubia Mosque",
+    "city": "Marrakech",
+    "description": "The largest mosque in Marrakech, known for its impressive minaret and beautiful gardens.",
+    "name": "Koutoubia Mosque",
+    "lat": 31.6258,
+    "lng": -7.9894,
+    "zoom": 18
+  },
+  {
+    "place": "Royal Palace of Fez",
+    "city": "Fez",
+    "description": "The royal palace with its stunning golden gates, beautiful mosaics, and large gardens.",
+    "name": "Royal Palace of Fez",
+    "lat": 34.0544,
+    "lng": -4.9733,
+    "zoom": 18
+  },
+  {
+    "place": "Al Akhawayn University",
+    "city": "Ifrane",
+    "description": "A modern university set in the picturesque town of Ifrane, often called 'Little Switzerland'.",
+    "name": "Al Akhawayn University",
+    "lat": 33.5353,
+    "lng": -5.1056,
+    "zoom": 18
+  },
+  {
+    "place": "Bab Bou Jeloud",
+    "city": "Fez",
+    "description": "The Blue Gate, a famous entrance to the old medina of Fez, decorated with blue and green tiles.",
+    "name": "Bab Bou Jeloud",
+    "lat": 34.0647,
+    "lng": -4.9782,
+    "zoom": 18
+  },
+  {
+    "place": "Bou Inania Madrasa",
+    "city": "Fez",
+    "description": "A historic madrasa in Fez known for its exquisite architecture and detailed woodwork.",
+    "name": "Bou Inania Madrasa",
+    "lat": 34.0617,
+    "lng": -4.9814,
+    "zoom": 18
+  },
+  {
+    "place": "Dar Batha Museum",
+    "city": "Fez",
+    "description": "A museum showcasing traditional Moroccan arts and crafts, housed in a former palace.",
+    "name": "Dar Batha Museum",
+    "lat": 34.0614,
+    "lng": -4.9839,
+    "zoom": 18
+  },
+  {
+    "place": "Sidi Ifni",
+    "city": "Sidi Ifni",
+    "description": "A coastal town known for its Spanish colonial architecture, beautiful beaches, and laid-back atmosphere.",
+    "name": "Sidi Ifni",
+    "lat": 29.3744,
+    "lng": -10.1789,
+    "zoom": 18
+  },
+  {
+    "place": "Agadir Beach",
+    "city": "Agadir",
+    "description": "A popular beach destination with golden sands, modern amenities, and a lively promenade.",
+    "name": "Agadir Beach",
+    "lat": 30.4195,
+    "lng": -9.5981,
+    "zoom": 18
+  },
+  {
+    "place": "Atlas Mountains",
+    "city": "Imlil",
+    "description": "A mountain range offering stunning views, hiking opportunities, and traditional Berber villages.",
+    "name": "Atlas Mountains",
+    "lat": 31.1477,
+    "lng": -7.7494,
+    "zoom": 18
+  },
+  {
+    "place": "Moulay Idriss Zerhoun",
+    "city": "Moulay Idriss",
+    "description": "A holy town and pilgrimage site, known for its whitewashed buildings and significant religious history.",
+    "name": "Moulay Idriss Zerhoun",
+    "lat": 34.0544,
+    "lng": -5.5278,
+    "zoom": 18
+  },
+  {
+    "place": "Saadian Tombs",
+    "city": "Marrakech",
+    "description": "Historic royal tombs with intricate carvings and beautiful gardens, dating back to the Saadian dynasty.",
+    "name": "Saadian Tombs",
+    "lat": 31.6193,
+    "lng": -7.9876,
+    "zoom": 18
+  },
+  {
+    "place": "Medina of Tetouan",
+    "city": "Tetouan",
+    "description": "A UNESCO World Heritage site with narrow streets, traditional markets, and Spanish-influenced architecture.",
+    "name": "Medina of Tetouan",
+    "lat": 35.5704,
+    "lng": -5.3723,
+    "zoom": 18
+  },
+  {
+    "place": "Marrakech Museum",
+    "city": "Marrakech",
+    "description": "A museum housed in a beautiful palace, showcasing Moroccan art, pottery, and historic artifacts.",
+    "name": "Marrakech Museum",
+    "lat": 31.6318,
+    "lng": -7.9861,
+    "zoom": 18
+  },
+  {
+    "place": "Palais Bahia",
+    "city": "Marrakech",
+    "description": "A 19th-century palace known for its beautiful gardens, intricate mosaics, and stunning architecture.",
+    "name": "Palais Bahia",
+    "lat": 31.6219,
+    "lng": -7.9811,
+    "zoom": 18
+  },
+  {
+    "place": "Medersa Ben Youssef",
+    "city": "Marrakech",
+    "description": "A historic Islamic college with beautiful courtyards, intricate carvings, and traditional Moroccan architecture.",
+    "name": "Medersa Ben Youssef",
+    "lat": 31.6335,
+    "lng": -7.9869,
+    "zoom": 18
+  },
+  {
+    "place": "Asilah",
+    "city": "Asilah",
+    "description": "A coastal town known for its whitewashed buildings, vibrant murals, and annual cultural festival.",
+    "name": "Asilah",
+    "lat": 35.4654,
+    "lng": -6.0362,
+    "zoom": 18
+  },
+  {
+    "place": "Hercules Cave",
+    "city": "Tangier",
+    "description": "A cave complex near Tangier with stunning views of the Atlantic Ocean and mythological significance.",
+    "name": "Hercules Cave",
+    "lat": 35.7675,
+    "lng": -5.9395,
+    "zoom": 18
+  },
+  {
+    "place": "Rissani",
+    "city": "Rissani",
+    "description": "An ancient town known for its traditional souks, historic sites, and proximity to the Erg Chebbi dunes.",
+    "name": "Rissani",
+    "lat": 31.2805,
+    "lng": -4.2689,
+    "zoom": 18
+  },
+  {
+    "place": "Merzouga",
+    "city": "Merzouga",
+    "description": "A small village near the Erg Chebbi dunes, popular for desert tours, camel treks, and sandboarding.",
+    "name": "Merzouga",
+    "lat": 31.1016,
+    "lng": -4.0009,
+    "zoom": 18
+  },
+  {
+    "place": "Lagzira Beach",
+    "city": "Sidi Ifni",
+    "description": "A stunning beach known for its red sandstone arches, scenic views, and tranquil atmosphere.",
+    "name": "Lagzira Beach",
+    "lat": 29.2725,
+    "lng": -10.1997,
+    "zoom": 18
+  },
+  {
+    "place": "Paradise Valley",
+    "city": "Agadir",
+    "description": "A picturesque valley with natural rock pools, waterfalls, and lush greenery, perfect for hiking and swimming.",
+    "name": "Paradise Valley",
+    "lat": 30.5373,
+    "lng": -9.3731,
+    "zoom": 18
+  },
+  {
+    "place": "Mausoleum of Mohammed V",
+    "city": "Rabat",
+    "description": "The final resting place of King Mohammed V and his two sons, featuring stunning architecture and historical significance.",
+    "name": "Mausoleum of Mohammed V",
+    "lat": 34.0229,
+    "lng": -6.8355,
+    "zoom": 18
+  },
+  {
+    "place": "Tazekka National Park",
+    "city": "Taza",
+    "description": "A national park offering diverse landscapes, from cedar forests to deep gorges, ideal for hiking and wildlife viewing.",
+    "name": "Tazekka National Park",
+    "lat": 34.1071,
+    "lng": -4.1998,
+    "zoom": 18
   }
-  ]
+]
