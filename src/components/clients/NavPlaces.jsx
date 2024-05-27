@@ -1,6 +1,7 @@
 import Places from "../../Data/Places.json";
 import Cities from "../../Data/Cities.json";
 import { useState, useEffect, lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 const Gmap = lazy(() => import("../../layouts/clients/Gmap"));
 
 
@@ -67,7 +68,8 @@ export default function NavPlaces(props) {
           {Array.isArray(cityPlaces) ? (
             <ul>
               {cityPlaces.map((placeCity) => (
-                <li
+                <Link to={`/client/city/${DefaultCity.name}/${placeCity.id}`}   key={placeCity.place}>
+<li
                   key={placeCity.place}
                   onMouseEnter={() => {
                     HandleHover(placeCity);
@@ -76,6 +78,8 @@ export default function NavPlaces(props) {
                   {" "}
                   <h5>{placeCity.place}</h5> <p>{placeCity.description}</p>{" "}
                 </li>
+                </Link>
+                
               ))}
             </ul>
           ) : (

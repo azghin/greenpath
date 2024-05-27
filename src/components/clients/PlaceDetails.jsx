@@ -1,22 +1,5 @@
-import Places from "../../Data/Places.json"
-import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom";
 
-function PlaceDetails(){
-    //initial the default center 
-    const [defaultCenter,setDefaultCenter]=useState({});
-    const path = useLocation().pathname.split('/')
-    const city =path[path.length-2]
-    const placesCity = Places.filter(obj=>obj.city===city)
-    useEffect(()=>{
-       const placeIndice = placesCity.find(obj=>obj.id===6 )
-       if(placeIndice){
-        setDefaultCenter(placeIndice)
-       } else {
-        console.log('problem')
-       }
-
-    },[placesCity])
+function PlaceDetails(props){
     return(
         <section id="place-details">
             <div className="container">
@@ -26,7 +9,7 @@ function PlaceDetails(){
                 </div>
                 <div className="row">
                     <div><h2>img</h2></div>
-                    <div> {defaultCenter.name} </div>
+                    <div> {props.data.place} </div>
                 </div>
             </div>
         </section>

@@ -2,7 +2,7 @@ import Cities from "../../Data/Cities.json";
 import Places from "../../Data/Places.json";
 
 import { lazy, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Gmap = lazy(() => import('../../layouts/clients/Gmap'))
 
 function CityPlaces() {
@@ -48,7 +48,7 @@ function CityPlaces() {
                                 onMouseLeave={HandleOutHover}
                             >
                                 {" "}
-                                <h5>{placeCity.place}</h5> <p>{placeCity.description}</p>{" "}
+                             <Link to={`/client/city/${DefaultCity.name}/${placeCity.id}`} ><h5>{placeCity.place}</h5> <p>{placeCity.description}</p>{" "}</Link>  
                             </li>
                         ))}
                     </ul>
