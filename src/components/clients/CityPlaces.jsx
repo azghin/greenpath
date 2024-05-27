@@ -43,7 +43,7 @@ function CityPlaces() {
                     <ul className="scroll-container">
                         {PlacesOfCity.map((placeCity) => (
                             <li
-                                key={placeCity.place}
+                                key={placeCity.id}
                                 onMouseEnter={() => { HandelHover(placeCity) }}
                                 onMouseLeave={HandleOutHover}
                             >
