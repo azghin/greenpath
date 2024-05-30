@@ -27,8 +27,6 @@ function Cities() {
         }
         setCities(newCities)
     }, [])
-
-    console.log(cities)
     return (
         <main >
             <Intro />

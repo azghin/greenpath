@@ -19,7 +19,7 @@ export default function Gmap(props) {
     setCountry(props.data.name);
   }, [props.data]);
   const isMorocco = isPlaceMorocco(country);
-  
+  console.log(props.data)
   const apikey = "AIzaSyBFT7f7Ep3ASYRZUH9R7bdr7IZmIkhwbhI";
   return (
     <div className="googlemap">
