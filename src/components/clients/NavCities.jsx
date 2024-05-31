@@ -10,25 +10,32 @@ function NavCities() {
     name: "Morocco",
   });
   const [cities, setCities] = useState([]);
+  const [filteredCities,setFilteredCities]=useState([]);
   const [InputValue, setInputValue] = useState("");
+  // init the stats
   useEffect(() => {
     let newCities = [];
     for (let i = 0; i < Cities.length; i++) {
       newCities = [...newCities, Cities[i]];
     }
     setCities(newCities);
+    setFilteredCities(newCities)
   }, []);
+
+  // handle and filter the cities list
   const HandleInputChange = (event) => {
     const value = event.target.value;
     setInputValue(value);
     if(value===''){
-      setCities()
+      setFilteredCities(cities)
     }
     const filtered = cities.filter((item) =>
       item.name.toLowerCase().includes(value.toLowerCase())
     );
-    setCities(filtered);
+    setFilteredCities(filtered);
   };
+
+  //update the map via hover and out hover
   const handleHover = (city) => {
     const hoveredValue = city; // Parse the stored JSON value
     setDefaultCenter(hoveredValue);
@@ -56,7 +63,7 @@ function NavCities() {
             <h3> filter ....</h3>
           </div>
           <ul className="scroll-container">
-            {cities.map((city) => (
+            {filteredCities.map((city) => (
               <Link to={`/client/city/${city.name}`} key={`${city.name}`}>
                 {" "}
                 <li

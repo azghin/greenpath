@@ -1,4 +1,4 @@
-import money from "../img/money.svg";
+import money from "../../img/money.svg";
 import { useState, useEffect } from "react";
 
 

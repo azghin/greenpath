@@ -161,7 +161,7 @@ nav .logo h1{
 #hero {
   width: 100%;
   /* position: relative; */
-  background: url("../components/img/bg-hero.svg") center bottom no-repeat;
+  background: url("../img/bg-hero.svg") center bottom no-repeat;
   background-color: #fff;
   background-size: cover;
   padding: 200px 0 120px 0;
@@ -259,7 +259,7 @@ nav .logo h1{
 /*info section*/
 #info {
   width: 100%;
-  background: url("../components/img/info-bg.svg") center bottom no-repeat;
+  background: url("../img/info-bg.svg") center bottom no-repeat;
   background-size: contain;
   padding: 0 0 120px 0;
   display: flex;
@@ -654,11 +654,11 @@ section .section-title{
 
 /*end nav Places*/
 
-/*intro */
+/*intro */    
 #intro{
   width: 100%;
   padding: 100px 0 120px 0;
-  background: url("../components/img/wave.svg")center bottom no-repeat;
+  background: url("../img/wave.svg")center bottom no-repeat;
   background-size: cover;
 }
 @media (max-width: 991px){

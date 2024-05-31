@@ -1,10 +1,24 @@
 import { useLocation } from "react-router-dom"
 import PlaceDetails from "../../components/clients/PlaceDetails"
-
+import LPlaces from "../../Data/Places.json";
+import { useEffect, useState } from "react";
 
 
 function Place(){
-const Path=useLocation().pathname.split('/')
+    const [defaultCenter,setDefaultCenter]=useState({})
+    const Path=useLocation().pathname.split('/')
+    const cityName = Path[Path.length-2]
+    const placesCity = LPlaces.filter(obj=>obj.city===cityName)
+    useEffect(()=>{
+        const placeIndice = placesCity.find(obj=>obj.id===Number(Path[Path.length-1]))
+        console.log(placeIndice)
+        if(placeIndice){
+            setDefaultCenter(placeIndice)
+        }else {
+            console.log('probleme we have')
+        }
+    },[placesCity])
+
     return(
         <>
         <section id="place" className="clearfix">
@@ -13,11 +27,11 @@ const Path=useLocation().pathname.split('/')
                     img
                 </div>
                 <div className="placeIntro">
-                    <h2>you're now navigating <span> {Path[Path.length-2]}</span>  <br/> in <span>{Path[Path.length-1]}</span>  you'll find </h2>
+                    <h2>you're now navigating <span> {defaultCenter.city}</span>  <br/> in <span>{defaultCenter.place} </span>  you'll find </h2>
                 </div>
             </div>
         </section>
-        <PlaceDetails/>
+        <PlaceDetails data={defaultCenter}/>
         </>
         
     )

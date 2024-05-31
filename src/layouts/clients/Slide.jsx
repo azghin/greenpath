@@ -1,4 +1,4 @@
-import img1 from '../../components/img/bg-hero.svg'
+import img1 from '../../img/bg-hero.svg'
 function Slide(){
     return(
         <div className="slideImg">

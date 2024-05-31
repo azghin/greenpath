@@ -1,4 +1,5 @@
-function PlaceDetails(){
+
+function PlaceDetails(props){
     return(
         <section id="place-details">
             <div className="container">
@@ -8,7 +9,7 @@ function PlaceDetails(){
                 </div>
                 <div className="row">
                     <div><h2>img</h2></div>
-                    <div></div>
+                    <div> {props.data.place} </div>
                 </div>
             </div>
         </section>
