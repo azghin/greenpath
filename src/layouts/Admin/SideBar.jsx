@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 function SideBar(){
     return(
         
@@ -34,7 +35,7 @@ function SideBar(){
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>Statistiques</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -71,11 +72,10 @@ function SideBar(){
 
             
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
+                <Link className="nav-link" to="/addPlace">
+                    <i className="fas fa-fw fa-chart-area"></i>
+                    <span>Add Places </span>
+                </Link>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
@@ -90,12 +90,13 @@ function SideBar(){
                 </div>
             </li>
 
-            
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                <Link className="nav-link" to="/addCity">
+                    <i className="fas fa-fw fa-chart-area"></i>
+                    <span>AddCity</span>
+                </Link>
             </li>
+
 
            
             <li class="nav-item">
