@@ -1,8 +1,7 @@
 import Intro from "../../components/clients/Intro"
-import NavCities from "../../components/clients/NavCities"
+// import NavCities from "../../components/clients/NavCities"
 import { useLocation } from "react-router-dom"
 import { useEffect, useState, lazy, Suspense } from "react"
-// import NavigationMap from "../../layouts/clients/NavigationMap"
 import CitiesList from "../../Data/Cities.json";
 
 const NavigationMap = lazy(() => import('../../layouts/clients/NavigationMap'))
@@ -30,8 +29,9 @@ function Cities() {
     return (
         <main >
             <Intro />
+            {cities.length===0 ? null : <NavigationMap data={cities} defaultCenter={defaultCenter} /> }
             <Suspense>
-                <NavigationMap data={cities} defaultCenter={defaultCenter} />
+                {/* <NavigationMap data={cities} defaultCenter={defaultCenter} /> */}
 
             </Suspense>
             {/* <NavCities/> */}

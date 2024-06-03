@@ -17,7 +17,7 @@ function Place(){
         }else {
             console.log('probleme we have')
         }
-    },[placesCity])
+    },[Path,placesCity])
 
     return(
         <>
