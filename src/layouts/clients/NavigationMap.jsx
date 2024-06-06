@@ -28,11 +28,11 @@ function NavigationMap(props) {
   };
 
   // handle outHover event 
-  const HandlOutHover = (data)=>{
+  const HandlOutHover = (data) => {
     setDefaultCenter(props.defaultCenter)
   }
-  console.log(placesToShow);
-  console.log(filteredPlaces);
+
+  console.log(defaultCenter)
 
   return (
     <>
@@ -40,24 +40,23 @@ function NavigationMap(props) {
         <div className="container h-100">
           <div className="citieslist">
             <div>
-              <input type="text" className="form-control"/>
+              <input type="text" className="form-control" />
               filters
             </div>
             <ul className="scroll-container">
-                {}
-              {filteredPlaces.map((data) => (
-                <li key={data.name} onMouseEnter={() => HandleHover(data)} onMouseOut={()=>HandlOutHover(data)}>
-                  <Link to={`/client/city/${data.name}`}>
-                    <h3>{data.name}</h3>
-                  </Link>
-                </li>
-              ))}
+              {filteredPlaces.length === 0 ? null : filteredPlaces.map((data) => (<li key={data.name} onMouseEnter={() => HandleHover(data)} onMouseOut={() => HandlOutHover(data)}>
+                <Link to={`/client/city/${data.name}`}>
+                  <h3>{data.name}</h3>
+                </Link>
+              </li>))}
             </ul>
           </div>
           <div className="mapcity">
+            {/* {typeof defaultCenter === "object" ? <h1>map</h1> : null} */}
             <Suspense>
               <Gmap data={defaultCenter} />
             </Suspense>
+
           </div>
         </div>
       </section>
