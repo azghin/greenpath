@@ -1,38 +1,44 @@
 [
-    {
-      "lat": 33.573333,
-      "lng": -7.6,
-      "zoom": 10,
-      "name": "Casablanca"
-    },
-    {
-      "lat": 34.0209,
-      "lng": -6.8416,
-      "zoom": 10,
-      "name": "Rabat"
-    },
-    {
-      "lat": 31.6300,
-      "lng": -8.0089,
-      "zoom": 10,
-      "name": "Marrakech"
-    },
-    {
-      "lat": 35.7767,
-      "lng": -5.8039,
-      "zoom": 10,
-      "name": "Tangier"
-    },
-    {
-      "lat": 33.8950,
-      "lng": -5.5547,
-      "zoom": 10,
-      "name": "Meknes"
-    },
-    {
-      "lat": 30.4333,
-      "lng": -9.6000,
-      "zoom": 10,
-      "name": "Agadir"
-    }
-  ]
+  {
+    "lat": 33.573333,
+    "lng": -7.6,
+    "zoom": 10,
+    "name": "Casablanca",
+    "id": 0
+  },
+  {
+    "lat": 34.0209,
+    "lng": -6.8416,
+    "zoom": 10,
+    "name": "Rabat",
+    "id": 1
+  },
+  {
+    "lat": 31.63,
+    "lng": -8.0089,
+    "zoom": 10,
+    "name": "Marrakech",
+    "id": 2
+  },
+  {
+    "lat": 35.7767,
+    "lng": -5.8039,
+    "zoom": 10,
+    "name": "Tangier",
+    "id": 3
+  },
+  {
+    "lat": 33.895,
+    "lng": -5.5547,
+    "zoom": 10,
+    "name": "Meknes",
+    "id": 4
+  },
+  {
+    "lat": 30.4333,
+    "lng": -9.6,
+    "zoom": 10,
+    "name": "Agadir",
+    "id": 5
+  }
+]

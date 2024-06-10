@@ -29,7 +29,7 @@ function Cities() {
     return (
         <main >
             <Intro />
-            {cities.length===0 ? null : <NavigationMap data={cities} defaultCenter={defaultCenter} /> }
+            {cities.length===0 ? null : <NavigationMap data={cities} defaultCenter={defaultCenter} />   }
             <Suspense>
                 {/* <NavigationMap data={cities} defaultCenter={defaultCenter} /> */}
 

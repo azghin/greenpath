@@ -10,10 +10,10 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
-import Slide from '../../layouts/clients/Slide';
+
 
 //import images 
-import tanger from "../../img/cities/image.png"
+
 import Images from "../../Data/Images.json"
 
 function SliderImg() {
@@ -36,7 +36,7 @@ function SliderImg() {
           modules={[Navigation, Pagination]}
           className="mySwiper"
         >
-          {Images.map((image) => (<SwiperSlide key={image.key} > <div className='sildeImgWrapper'><img src={image.src} alt="" /> </div> </SwiperSlide>))}
+          {Images.map((image) => (<SwiperSlide key={image.id} > <div className='sildeImgWrapper'><img src={image.src} alt="" /> </div> </SwiperSlide>))}
         </Swiper>
       </div>
     </section>

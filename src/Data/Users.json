@@ -1,0 +1,21 @@
+[
+    {
+      "iduser": 1,
+      "name": "John",
+      "last_name": "Doe",
+      "email": "johndoe@example.com",
+      "password": "hashed_password",  
+      "picture": "https://example.com/profile_pic.jpg",
+      "isAdmin": true
+    },
+    {
+      "iduser": 2,
+      "name": "Jane",
+      "last_name": "Smith",
+      "email": "janesmith@example.com",
+      "password": "hashed_password", 
+      "picture": "https://example.com/jane_profile.jpg",
+      "isAdmin": false
+    }
+  ]
+  

@@ -1,0 +1,22 @@
+[
+    {
+      "id_review": 1,
+      "user": {
+        "id_user": 123,
+        "name": "John Doe",
+        "profile": "https://example.com/profile_pic.jpg"
+      },
+      "review": "This place is amazing! Great food and atmosphere.",
+      "tags": ["restaurant", "italian", "cozy"]
+    },
+    {
+      "id_review": 2,
+      "user": {
+        "id_user": 456,
+        "name": "Jane Smith",
+        "profile": "https://img.freepik.com/free-vector/man-profile-account-picture_24908-81754.jpg?t=st=1717871361~exp=1717874961~hmac=61eddcf8e5d108be15651dc73dcaa5a3c5a3952d7e0d3db7dd76cf3055c96d13&w=740"
+      },
+      "review": "Beautiful park, perfect for a relaxing afternoon.",
+      "tags": ["park", "nature", "outdoors"]
+    }
+  ]

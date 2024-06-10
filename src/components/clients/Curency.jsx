@@ -2,7 +2,7 @@ import money from "../../img/money.svg";
 import { useState, useEffect } from "react";
 
 
-function Advices() {
+function Curency() {
   const [currencyData, setCurrencyData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -41,7 +41,7 @@ function Advices() {
   }
 
   return (
-    <section id="advices">
+    <section id="Curency">
       <div className="container">
         <div className="row">
           <div className="currency-img">
@@ -112,4 +112,4 @@ function CurrentDate() {
     
   );
 }
-export default Advices;
+export default Curency;

@@ -445,20 +445,20 @@ nav .logo h1{
 }
 
 /*end slider*/
-/*Advices*/
-#advices{
+/*Curency*/
+#Curency{
   width: 100%;
   background: #fff;
   padding: 0 0 120px 0;
   display: flex;
 }
-#advices .currency{
+#Curency .currency{
   width: 50%;
   display: flex;
   align-items: center;
 }
 
-#advices .currency-img{
+#Curency .currency-img{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -466,29 +466,29 @@ nav .logo h1{
   float: right;
 }
 @media (max-width: 991px) {
-  #advices .currency{
+  #Curency .currency{
     width: 100%;
     display: flex;
     align-items: center;
   }
   
-  #advices .currency-img{
+  #Curency .currency-img{
     width: 80%;
     float: none;
     margin: 0 auto 25px auto;
   }
 }
-#advices .currency-img img{ 
+#Curency .currency-img img{ 
   width: 100%;
 }
-#advices .currency h4{
+#Curency .currency h4{
   font-weight: 600;
   font-size: 24px;
 }
 
 
 
-/*end Advices*/
+/*end Curency*/
 /*Mostvisited*/
 #Mostvisited{
   width: 100%;
@@ -534,6 +534,14 @@ nav .logo h1{
 #Homestories .story-desc h3{
   margin: 0;
 }
+#Homestories .img-holder{
+  
+}
+#Homestories .name-holder{
+  display: flex;
+  align-items: center;
+}
+
 
 /*paragraphs */
 section .centertext{

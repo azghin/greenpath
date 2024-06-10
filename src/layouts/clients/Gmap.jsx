@@ -1,59 +1,47 @@
-import {
-  APIProvider,
-  Map,
-  AdvancedMarker,
-  Pin,
-} from "@vis.gl/react-google-maps";
-import { useState, useEffect } from "react";
+import {APIProvider, Map,AdvancedMarker,Pin} from "@vis.gl/react-google-maps";
+import { useState, useEffect, useMemo } from "react";
 
+const defaultCenter  = {
+  lat: 29.71138072361799,
+  lng: -8.714060252932148,
+  zoom: 5,
+  name: "Morocco",
+}
 export default function Gmap(props) {
-  const [country, setCountry] = useState("Morocco");
-  const [center, setCenter] = useState({
-    lat: 29.71138072361799,
-    lng: -8.714060252932148,
-    zoom: 5,
-    name: "Morocco",
-  });
+  const [center, setCenter] = useState(defaultCenter);
+
   useEffect(() => {
     setCenter(props.data);
-    setCountry(props.data.name);
   }, [props.data]);
-  const isMorocco = isPlaceMorocco(country);
-  console.log(props.data)
+
+  const isMorocco = useMemo(()=>center.name === "Morocco" , [center])
+  
   const apikey = "AIzaSyBFT7f7Ep3ASYRZUH9R7bdr7IZmIkhwbhI";
   return (
     <div className="googlemap">
       <APIProvider region="ma" apiKey={apikey}>
         <Map
           style={{ width: "100%", height: "100%" }}
-          center={{ lat: center.lat, lng: center.lng }}
-          defaultCenter={{lat:center.lat,lng:center.lng}}
+          defaultCenter={defaultCenter}
+          defaultZoom={defaultCenter.zoom}
+          center={(center.lat && center.lng) ? { lat: center.lat , lng: center.lng  }: null}
           zoom={center.zoom}
-          defaultZoom={center.zoom}
           gestureHandling={"greedy"}
           disableDefaultUI={true}
           mapId={"921104f6dd1bfaa2"}
           
         >
-          {isMorocco ? (
-            null
-          ) : (
-            <AdvancedMarker position={{ lat: center.lat, lng: center.lng }}>
+           
+            {!isMorocco &&<AdvancedMarker position={{ lat: center.lat, lng: center.lng }}>
               <Pin
                 background={"#0f9d58"}
                 borderColor={"#006425"}
                 glyphColor={"#60d98f"}
               />
-            </AdvancedMarker>
-          )}
+            </AdvancedMarker>}
+          
         </Map>
       </APIProvider>
     </div>
   );
-}
-function isPlaceMorocco(center) {
-  // const placeName = String(center.name)
-  if (center === "Morocco") {
-    return true;
-  } else return false;
 }

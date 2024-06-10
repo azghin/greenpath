@@ -1,7 +1,7 @@
 import { Suspense, lazy,useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const Advices = lazy(() => import("../../components/clients/Advices"));
+const Curency = lazy(() => import("../../components/clients/Curency"));
 const Hero = lazy(() => import("../../components/clients/Hero"));
 const Info = lazy(() => import("../../components/clients/Info"));
 const SliderImg = lazy(() => import("../../components/clients/SliderImg"));
@@ -28,7 +28,7 @@ function Home() {
         <SliderImg />
       </Suspense>
       <Suspense fallback={<div>loading</div>}>
-        <Advices />
+        <Curency />
       </Suspense>
       <Suspense fallback={<div>loading</div>}>
         <VisitedCities />
