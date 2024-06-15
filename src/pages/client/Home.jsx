@@ -1,4 +1,4 @@
-import { Suspense, lazy,useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const Curency = lazy(() => import("../../components/clients/Curency"));
@@ -11,10 +11,10 @@ const VisitedCities = lazy(() =>
 const HStory = lazy(() => import("../../components/clients/HStory"));
 
 function Home() {
-    const location=useLocation();
-    useEffect(()=>{
-        window.scrollTo(0,0);
-    },[location])
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <>

@@ -36,8 +36,6 @@ function CityPlaces() {
     return (
         <section id="NavPlaces">
             <div className="container">
-
-            
             <div className="list-places">
                 {Array.isArray(PlacesOfCity) && PlacesOfCity.length > 0 ? (
                     <ul className="scroll-container">

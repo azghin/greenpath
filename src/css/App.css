@@ -419,17 +419,36 @@ nav .logo h1{
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .swiper-slide .sildeImgWrapper{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
+.swiper-slide .sildeImgWrapper .image-background{
+  width: 1024px;
+  height: 630px;
+  position: relative;
+}
+.swiper-slide .sildeImgWrapper .image-background .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute; 
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+}
+
+
 
 .swiper-slide img {
   display: block;
@@ -635,7 +654,7 @@ section .section-title{
   height: 100%;
 }
 #NavPlaces .list-places{
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;

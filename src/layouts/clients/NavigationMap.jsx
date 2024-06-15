@@ -36,13 +36,9 @@ function NavigationMap(props) {
 
   return (
     <>
-      <section id="SelectCity">
-        <div className="container h-100">
-          <div className="citieslist">
-            <div>
-              <input type="text" className="form-control" />
-              filters
-            </div>
+      <section id="NavPlaces">
+        <div className="container ">
+          <div className="list-places">
             <ul className="scroll-container">
               {filteredPlaces.length === 0 ? null : filteredPlaces.map((data) => (<li key={data.name} onMouseEnter={() => HandleHover(data)} onMouseOut={() => HandlOutHover(data)}>
                 <Link to={`/client/city/${data.name}`}>
@@ -51,7 +47,7 @@ function NavigationMap(props) {
               </li>))}
             </ul>
           </div>
-          <div className="mapcity">
+          <div className="mapPlaces">
             {/* {typeof defaultCenter === "object" ? <h1>map</h1> : null} */}
             <Suspense>
               <Gmap data={defaultCenter} />
