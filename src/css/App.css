@@ -1,13 +1,18 @@
 body{
-  height: 100%;
   padding-top: 72px;
   background: #388E3C;
   color: #444;
 }
+#root{
+  height: 100%;
+}
 main{
   background: #fff;
-  height: 100%;
   min-height: 100vh;
+  
+}
+.App{
+  height: 100%;
 }
 a{
   color: #388E3C;
@@ -655,6 +660,7 @@ section .section-title{
 }
 #NavPlaces .list-places{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;

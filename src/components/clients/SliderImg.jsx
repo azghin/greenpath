@@ -34,7 +34,7 @@ function SliderImg() {
         >
           {Images.map((image) => (
             <SwiperSlide key={image.id}>
-              {" "}
+              
               <div
                 className="sildeImgWrapper"
                
@@ -46,12 +46,12 @@ function SliderImg() {
                     {image.city}
                   </h1>
                   <p>Lorem ipsum ...</p>
-                </div>{" "}
+                </div>
                 </div>
                 
                 {/* <img src={image.src} alt="" /> */}
                 
-              </div>{" "}
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

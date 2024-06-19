@@ -25,7 +25,7 @@ function Navbar(){
                         <li><Link to="/" className="nav-link scrollto">Home</Link></li>
                         <li><Link to="/client/cities" className="nav-link scrollto">Cities</Link></li>
                         <li><Link to="/" className="nav-link scrollto">Green Path</Link></li>
-                        <li><Link to="/" className="nav-link scrollto">Green Path</Link></li>
+                        <li><Link to="/login" className="nav-link scrollto">login 'btn'</Link></li>
                     </ul>
                     <i className="bi bi-list mobile-nav-toggle"></i>
                 </div>

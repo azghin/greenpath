@@ -9,6 +9,7 @@ import Navbar from "../layouts/clients/Navbar";
 
 import "../css/App.css";
 import Place from "./client/Place";
+import Login from "./client/Login";
 
 function App() {
   
@@ -27,6 +28,7 @@ function App() {
         <Route path="/client/cities" element={<Cities/>}/>
         <Route path="/client/city/:name" element={<City/>} />
         <Route path="/client/city/:name/:place" element={<Place/>} />
+        <Route path="/login" element={<Login/>}/>
       </Routes>
       
     </main>
