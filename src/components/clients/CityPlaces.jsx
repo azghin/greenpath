@@ -1,31 +1,42 @@
 import Cities from "../../Data/Cities.json";
-import Places from "../../Data/Places.json";
+import { Places } from "../../recoil_state";
+import { useRecoilValue } from "recoil";
 
 import { lazy, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+
 const Gmap = lazy(() => import('../../layouts/clients/Gmap'))
 
 function CityPlaces() {
-    const [DefaultCenter, setDefaultCenter] = useState({})
-    const [DefaultCity, setDefaultCity] = useState({})
-    const [PlacesOfCity, setPlacesOfCity] = useState([])
-
     const Location = useLocation().pathname
     const CityName = Location.split('/').pop()
+    const allPlaces=useRecoilValue(Places)
+    const [defaultPlaces,setDefaultPlaces]=useState([])
     const newCity = Cities.find((city) => city.name === CityName);
-    useEffect(() => {
-        let newPlaces = []
-        if (newCity) {
+    const [DefaultCity, setDefaultCity] = useState({})
+    const [DefaultCenter, setDefaultCenter] = useState({})
+    const [FilteredPlaces,setFilteredPlaces]=useState([])
+    const [searchTerm,setSearchTerm]=useState('');
+
+    useEffect(()=>{
+        const filtered = allPlaces.filter(place=>place.city.toLowerCase()===CityName.toLowerCase())
+        setFilteredPlaces(filtered)
+        setDefaultPlaces(filtered)
+        console.log('something');
+    },[allPlaces,CityName])
+    useEffect(()=>{
+        if(newCity){
             setDefaultCity(newCity)
             setDefaultCenter(newCity)
-            for (let i = 0; i < Places.length; i++) {
-                if (Places[i].city === newCity.name) {
-                    newPlaces = [...newPlaces, Places[i]]
-                }
-            }
-            setPlacesOfCity(newPlaces)
         }
-    }, [newCity])
+    },[newCity])
+    const handleSearch = (event)=>{
+        const value = event.target.value.toLowerCase();
+        setSearchTerm(value)
+        const filtered = defaultPlaces.filter(obj=>obj.name.toLowerCase().includes(value));
+        setFilteredPlaces(filtered)
+        console.log(filtered)
+    }
 
     const HandelHover = (placeCity) => {
         setDefaultCenter(placeCity)
@@ -37,9 +48,13 @@ function CityPlaces() {
         <section id="NavPlaces">
             <div className="container">
             <div className="list-places">
-                {Array.isArray(PlacesOfCity) && PlacesOfCity.length > 0 ? (
+            <div className="filters mb-3 mt-3">
+              <label htmlFor="" className="form-label"> enter place name </label>
+              <input type="text" className="form-control" value={searchTerm} onChange={handleSearch}  />
+            </div>
+                {Array.isArray(FilteredPlaces) && FilteredPlaces.length > 0 ? (
                     <ul className="scroll-container">
-                        {PlacesOfCity.map((placeCity) => (
+                        {FilteredPlaces.map((placeCity) => (
                             <li
                                 key={placeCity.id}
                                 onMouseEnter={() => { HandelHover(placeCity) }}

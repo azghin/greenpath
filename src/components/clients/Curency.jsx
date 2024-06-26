@@ -12,7 +12,7 @@ function Curency() {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "https://api.currencyfreaks.com/v2.0/rates/latest?apikey=5f26016109b842a3a1cddc43b5d49af7&symbols=EUR,MAD,USD&base=USD"
+          "https://api.currencyfreaks.com/v2.0/rates/latest?apikey=abf30753f0f2461a85776d5797c477a5&symbols=EUR,MAD,USD&base=USD"
         );
         if (!response.ok) {
           throw new Error(`API request failed with status ${response.status}`);

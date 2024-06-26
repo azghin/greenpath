@@ -35,20 +35,20 @@
     "img": "https://media.istockphoto.com/id/530236509/photo/evening-djemaa-el-fna-square-with-koutoubia-mosque-marrakech-morocco.webp?s=2048x2048&w=is&k=20&c=TjaXtqIaE-_vGAnREforu5FYeBJ4izRGTeD28WmbSeI=",
     "details": [
       {
-        "Historical Background": [
+        "Historical Background": 
           {
-            "Origins": "The square dates back to the founding of Marrakech in the 11th century by the Almoravid dynasty. Its name is believed to mean 'Assembly of the Dead' or 'Place of the Vanished Mosque,' possibly referring to a destroyed mosque or to public executions that took place there."
-          },
-          {
+            "Origins": "The square dates back to the founding of Marrakech in the 11th century by the Almoravid dynasty. Its name is believed to mean 'Assembly of the Dead' or 'Place of the Vanished Mosque,' possibly referring to a destroyed mosque or to public executions that took place there.",
             "UNESCO World Heritage Site": "In 2001, Jemaa el-Fnaa was recognized as a UNESCO Masterpiece of the Oral and Intangible Heritage of Humanity, highlighting its importance as a center of cultural expression and public life."
-          }
-        ]
+          },
+          "svg":"svg ici"
+
       },
       {
         "Atmosphere and Activities": {
           "Daytime": " During the day, the square is filled with various stalls selling fresh juices, dried fruits, spices, and traditional Moroccan goods. Snake charmers, monkey handlers, and henna tattoo artists are also common sights.",
           "Evening": "As evening approaches, Jemaa el-Fnaa transforms into a vibrant hub of activity. Food stalls set up, offering a variety of traditional Moroccan dishes like tagines, couscous, and harira (a traditional soup). The square fills with the sounds of musicians, storytellers, acrobats, and performers."
-        }
+        },
+        "svg":"svg ici"
       }
     ]
   },

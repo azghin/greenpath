@@ -7,6 +7,8 @@ const Gmap = lazy(() => import("./Gmap"));
 function NavigationMap(props) {
   const [defaultCenter, setDefaultCenter] = useState({});
   const [filteredPlaces, setFilteredPlaces] = useState([]);
+  const [searchTerm,setSearchTerm]=useState('')
+
   useEffect(() => {
     if (props.defaultCenter) {
       setDefaultCenter(props.defaultCenter);  
@@ -18,6 +20,12 @@ function NavigationMap(props) {
       setFilteredPlaces(props.data);
     }
   }, [props.data]);
+  const handleSearch = (event)=>{
+    const value = event.target.value.toLowerCase();
+    setSearchTerm(value);
+    const filtered = props.data.filter(place=>place.name.toLowerCase().includes(value));
+    setFilteredPlaces(filtered)
+  }
 
   // handle hover event 
   const HandleHover = (data) => {
@@ -37,7 +45,7 @@ function NavigationMap(props) {
           <div className="list-places">
             <div className="filters mb-3 mt-3">
               <label htmlFor="" className="form-label"> enter city name </label>
-              <input type="text" className="form-control" />
+              <input type="text" className="form-control" value={searchTerm} onChange={handleSearch} />
             </div>
             <ul className="scroll-container">
               {filteredPlaces.length === 0 ? null : filteredPlaces.map((data) => (<li key={data.name} onMouseEnter={() => HandleHover(data)} onMouseOut={() => HandlOutHover(data)}>

@@ -2,7 +2,7 @@ import { Suspense, lazy, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 
-// const Curency = lazy(() => import("../../components/clients/Curency"));
+const Curency = lazy(() => import("../../components/clients/Curency"));
 const Hero = lazy(() => import("../../components/clients/Hero"));
 const Info = lazy(() => import("../../components/clients/Info"));
 const SliderImg = lazy(() => import("../../components/clients/SliderImg"));
@@ -29,9 +29,9 @@ function Home() {
       <Suspense fallback={<div>loading</div>}>
         <SliderImg />
       </Suspense>
-      {/* <Suspense fallback={<div>loading</div>}>
+      <Suspense fallback={<div>loading</div>}>
         <Curency />
-      </Suspense> */}
+      </Suspense>
       <Suspense fallback={<div>loading</div>}>
         <VisitedCities />
       </Suspense>

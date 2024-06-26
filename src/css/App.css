@@ -868,6 +868,22 @@ section .section-title{
   align-items: center;
   justify-content: center;
 }
+#blog .name-holder{
+  display: flex;
+  align-items: center;
+}
+
+#blog .name-holder h2{
+  margin: 0;
+}
+#blog .allblog ul{
+  margin: 0;
+  padding: 10px 0 10px 0;
+}
+#blog .allblog ul li{
+  list-style-type: none;
+  padding: 10px 0 10px 0;
+}
 
 
 /*Login */

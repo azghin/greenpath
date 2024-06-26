@@ -3,8 +3,9 @@ import { useLocation } from "react-router-dom";
 import { useEffect, lazy } from "react";
 import { CitiesL } from "../../recoil_state";
 import { useRecoilValue } from "recoil";
-
 const NavigationMap = lazy(() => import("../../layouts/clients/NavigationMap"));
+
+
 const defaultCenter = {
   lat: 29.71138072361799,
   lng: -8.714060252932148,
