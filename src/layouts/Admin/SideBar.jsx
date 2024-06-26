@@ -2,61 +2,77 @@ import {Link} from 'react-router-dom'
 function SideBar(){
     return(
         
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+            <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div className="sidebar-brand-icon rotate-n-15">
+                    <i className="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
             </a>
 
             
-            <hr class="sidebar-divider my-0"/>
+            <hr className="sidebar-divider my-0"/>
 
            
-            <li class="nav-item active">
+            <li className="nav-item active">
                 <Link to={'/admin'} className='nav-link'>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i className="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </Link>  
             </li>
 
             
-            <hr class="sidebar-divider"/>
+            <hr className="sidebar-divider"/>
 
 
-            <hr class="sidebar-divider"/>
+            <hr className="sidebar-divider"/>
 
-            <div class="sidebar-heading">
+            <div className="sidebar-heading">
                 Gestion
             </div>
 
+             <li className="nav-item">
+                <Link className="nav-link" to="/admin/addCity">
+                    <i className="fas fa-fw fa-chart-area"></i>
+                    <span>AddCity</span>
+                </Link>
+            </li>
             
-            <li class="nav-item">
+            <li className="nav-item">
                 <Link className="nav-link" to="/admin/addPlace">
                     <i className="fas fa-fw fa-chart-area"></i>
                     <span>Add Places </span>
                 </Link>
             </li>
 
-            <li class="nav-item">
-                <Link className="nav-link" to="/admin/addCity">
+           
+            <li className="nav-item">
+                <Link className="nav-link" to="/admin/allcities">
                     <i className="fas fa-fw fa-chart-area"></i>
-                    <span>AddCity</span>
+                    <span>All Cities</span>
+                </Link>
+            </li>
+            <li className="nav-item">
+                <Link className="nav-link" to="/admin/allplaces">
+                    <i className="fas fa-fw fa-chart-area"></i>
+                    <span>All Places</span>
                 </Link>
             </li>
 
 
            
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
+            <li className="nav-item">
+                <a className="nav-link" href="tables.html">
+                    <i className="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
             </li>
 
-            <hr class="sidebar-divider d-none d-md-block"/>
+            <hr className="sidebar-divider d-none d-md-block"/>
+            <li >
+
+            </li>
 
             
 

@@ -14,7 +14,7 @@ function Info() {
               <br />
               <span>It's up to you to decide!!</span>
               <br />
-              let's get ready{" "}
+              let's get ready
             </h2>
           </div>
         </div>

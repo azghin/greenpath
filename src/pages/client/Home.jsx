@@ -2,13 +2,11 @@ import { Suspense, lazy, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 
-const Curency = lazy(() => import("../../components/clients/Curency"));
+// const Curency = lazy(() => import("../../components/clients/Curency"));
 const Hero = lazy(() => import("../../components/clients/Hero"));
 const Info = lazy(() => import("../../components/clients/Info"));
 const SliderImg = lazy(() => import("../../components/clients/SliderImg"));
-const VisitedCities = lazy(() =>
-  import("../../components/clients/VisitedCities")
-);
+const VisitedCities = lazy(() => import("../../components/clients/VisitedCities"));
 const HStory = lazy(() => import("../../components/clients/HStory"));
 
 function Home() {
@@ -31,9 +29,9 @@ function Home() {
       <Suspense fallback={<div>loading</div>}>
         <SliderImg />
       </Suspense>
-      <Suspense fallback={<div>loading</div>}>
+      {/* <Suspense fallback={<div>loading</div>}>
         <Curency />
-      </Suspense>
+      </Suspense> */}
       <Suspense fallback={<div>loading</div>}>
         <VisitedCities />
       </Suspense>
@@ -42,9 +40,6 @@ function Home() {
       </Suspense>
 
       <h1>advices</h1>
-      <h1>most visited cities</h1>
-      <h1>most fav cities in app</h1>
-      <h1>some of the stories</h1>
     </>
   );
 }

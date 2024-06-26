@@ -4,12 +4,8 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 const Gmap = lazy(() => import("../../layouts/clients/Gmap"));
 
-
-
-
-
 export default function NavPlaces(props) {
-  const [ShouldRender, setShouldRender] = useState(false)
+  const [ShouldRender, setShouldRender] = useState(false);
   const [DefaultCity, setDefaultCity] = useState();
   const [DefaultCenter, setDefaultCenter] = useState({});
   const [cityPlaces, setCityPlace] = useState([]);
@@ -18,24 +14,23 @@ export default function NavPlaces(props) {
   const newCity = Cities.find((city) => city.name === cityName);
 
   useEffect(() => {
-    if (typeof DefaultCenter === 'object') {
-      setShouldRender(true)
+    if (typeof DefaultCenter === "object") {
+      setShouldRender(true);
     }
-  }, [DefaultCenter])
+  }, [DefaultCenter]);
 
   useEffect(() => {
     if (newCity) {
-      setDefaultCity(newCity)
+      setDefaultCity(newCity);
     }
-  }, [newCity])
-
+  }, [newCity]);
 
   useEffect(() => {
     if (DefaultCity) {
-      setDefaultCenter(DefaultCity)
+      setDefaultCenter(DefaultCity);
     }
-  }, [DefaultCity])
-  console.log(DefaultCity)
+  }, [DefaultCity]);
+  console.log(DefaultCity);
   useEffect(() => {
     let newPlaces = [];
     for (let i = 0; i < Places.length; i++) {
@@ -52,53 +47,56 @@ export default function NavPlaces(props) {
   }, [cityName]);
 
   const HandleHover = (placeCity) => {
-    const HoveredValue = placeCity
+    const HoveredValue = placeCity;
     setDefaultCenter(HoveredValue);
-
   };
-  console.log(DefaultCity)
+  console.log(DefaultCity);
   return (
-
     <section id="NavPlaces" className="clearfix">
+      {ShouldRender ? (
+        <div className="container h-100">
+          <div className="list-places ">
+            {DefaultCity.name === cityName ? (
+              <h2>in {DefaultCity.name} you'll find </h2>
+            ) : (
+              <h1>loading</h1>
+            )}
 
-      {ShouldRender ? <div className="container h-100">
-        <div className="list-places ">
-          {DefaultCity.name === cityName ? <h2>in {DefaultCity.name} you'll find </h2> : <h1>loading</h1>}
-
-          {Array.isArray(cityPlaces) ? (
-            <ul>
-              {cityPlaces.map((placeCity) => (
-                <Link to={`/client/city/${DefaultCity.name}/${placeCity.id}`}   key={placeCity.place}>
-<li
-                  key={placeCity.place}
-                  onMouseEnter={() => {
-                    HandleHover(placeCity);
-                  }}
-                >
-                  {" "}
-                  <h5>{placeCity.place}</h5> <p>{placeCity.description}</p>{" "}
-                </li>
-                </Link>
-                
-              ))}
-            </ul>
-          ) : (
-            <h2>{cityPlaces}</h2>
-          )}
+            {Array.isArray(cityPlaces) ? (
+              <ul>
+                {cityPlaces.map((placeCity) => (
+                  <Link
+                    to={`/client/city/${DefaultCity.name}/${placeCity.id}`}
+                    key={placeCity.place}
+                  >
+                    <li
+                      key={placeCity.place}
+                      onMouseEnter={() => {
+                        HandleHover(placeCity);
+                      }}
+                    >
+                      <h5>{placeCity.place}</h5> <p>{placeCity.description}</p>
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            ) : (
+              <h2>{cityPlaces}</h2>
+            )}
+          </div>
+          <div className="mapPlaces">
+            {typeof DefaultCenter === "object" ? (
+              <Suspense fallback={<div>loading</div>}>
+                <Gmap city={true} data={DefaultCenter} />
+              </Suspense>
+            ) : (
+              <h1>loading</h1>
+            )}
+          </div>
         </div>
-        <div className="mapPlaces">
-          {typeof DefaultCenter === 'object' ? <Suspense fallback={<div>loading</div>}>
-            <Gmap city={true} data={DefaultCenter} />
-          </Suspense> : <h1>loading</h1>}
-
-
-        </div>
-      </div> : <h2>no</h2>}
-
+      ) : (
+        <h2>no</h2>
+      )}
     </section>
-
-
-
-
   );
 }

@@ -1,7 +1,7 @@
 [
   {
-    "lat": 33.573333,
-    "lng": -7.6,
+    "lat": 33.5883,
+    "lng": -7.6114,
     "zoom": 10,
     "name": "Casablanca",
     "id": 0
@@ -11,21 +11,30 @@
     "lng": -6.8416,
     "zoom": 10,
     "name": "Rabat",
-    "id": 1
+    "id": 1,
+    "ranking":2,
+    "desc":"capital city",
+    "img":"https://images.pexels.com/photos/2945595/pexels-photo-2945595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     "lat": 31.63,
     "lng": -8.0089,
     "zoom": 10,
     "name": "Marrakech",
-    "id": 2
+    "id": 2,
+    "ranking":1,
+    "desc":"the red city",
+    "img":"https://images.unsplash.com/photo-1569370088252-c26ef022594c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "lat": 35.7767,
     "lng": -5.8039,
     "zoom": 10,
     "name": "Tangier",
-    "id": 3
+    "id": 3,
+    "ranking":3,
+    "desc":"al boughaz",
+    "img":"https://images.unsplash.com/photo-1633264542743-c1acdb5eff0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "lat": 33.895,
@@ -35,10 +44,52 @@
     "id": 4
   },
   {
-    "lat": 30.4333,
-    "lng": -9.6,
+    "lat": 30.4278,
+    "lng": -9.5981,
     "zoom": 10,
     "name": "Agadir",
     "id": 5
+  },
+  {
+    "lat": 31.5085,
+    "lng": -9.7595,
+    "zoom": 10,
+    "name": "Essaouira",
+    "id": 6
+  },
+  {
+    "lat": 30.4706,
+    "lng": -8.8789,
+    "zoom": 10,
+    "name": "Taroudant",
+    "id": 7
+  },
+  {
+    "lat": 35.1686,
+    "lng": -5.2642,
+    "zoom": 10,
+    "name": "Chefchaouen",
+    "id": 8
+  },
+  {
+    "lat": 30.9167,
+    "lng": -6.9186,
+    "zoom": 10,
+    "name": "Ouarzazate",
+    "id": 9
+  },
+  {
+    "lat": 32.2994,
+    "lng": -9.2372,
+    "zoom": 10,
+    "name": "Safi",
+    "id": 10
+  },
+  {
+    "lat": 35.5785,
+    "lng": -5.3684,
+    "zoom": 10,
+    "name": "Tetouan",
+    "id": 11
   }
 ]

@@ -45,8 +45,8 @@ function CityPlaces() {
                                 onMouseEnter={() => { HandelHover(placeCity) }}
                                 onMouseLeave={HandleOutHover}
                             >
-                                {" "}
-                             <Link to={`/client/city/${DefaultCity.name}/${placeCity.id}`} ><h5>{placeCity.place}</h5> <p>{placeCity.description}</p>{" "}</Link>  
+                                
+                             <Link to={`${placeCity.id}`} ><h5>{placeCity.place}</h5> <p>{placeCity.description}</p></Link>  
                             </li>
                         ))}
                     </ul>

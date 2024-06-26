@@ -1,22 +1,52 @@
 [
-    {
-      "id_review": 1,
-      "user": {
-        "id_user": 123,
-        "name": "John Doe",
-        "profile": "https://example.com/profile_pic.jpg"
-      },
-      "review": "This place is amazing! Great food and atmosphere.",
-      "tags": ["restaurant", "italian", "cozy"]
+  {
+    "id_review": 1,
+    "user": {
+      "id_user": 2,
+      "name": "Abdelsallam Allami",
+      "profile": "https://img.freepik.com/free-vector/man-profile-account-picture_24908-81754.jpg?t=st=1717871361~exp=1717874961~hmac=61eddcf8e5d108be15651dc73dcaa5a3c5a3952d7e0d3db7dd76cf3055c96d13&w=740"
     },
-    {
-      "id_review": 2,
-      "user": {
-        "id_user": 456,
-        "name": "Jane Smith",
-        "profile": "https://img.freepik.com/free-vector/man-profile-account-picture_24908-81754.jpg?t=st=1717871361~exp=1717874961~hmac=61eddcf8e5d108be15651dc73dcaa5a3c5a3952d7e0d3db7dd76cf3055c96d13&w=740"
-      },
-      "review": "Beautiful park, perfect for a relaxing afternoon.",
-      "tags": ["park", "nature", "outdoors"]
-    }
-  ]
+    "review": "This place is amazing! Great history and culture. I visited the medina in Fez last weekend with some friends, and we were all blown away by the intricate architecture and vibrant atmosphere. The narrow, winding streets are filled with shops selling handmade crafts, spices, and traditional clothing. The scent of fresh bread baking and the sound of artisans working add to the immersive experience. The locals were welcoming and eager to share stories about their heritage. We ended our visit with a delicious tagine meal at a local restaurant that was the perfect blend of savory and sweet. Highly recommend this spot for anyone looking to experience the rich culture of Morocco.",
+  "tags": ["Fez","historical", "cultural", "medina"]
+  },
+  {
+    "id_review": 2,
+    "user": {
+      "id_user": 2,
+      "name": "Abdelsallam Allami",
+      "profile": "https://img.freepik.com/free-vector/man-profile-account-picture_24908-81754.jpg?t=st=1717871361~exp=1717874961~hmac=61eddcf8e5d108be15651dc73dcaa5a3c5a3952d7e0d3db7dd76cf3055c96d13&w=740"
+    },
+    "review": "Menara Gardens in Marrakech is perfect for a relaxing afternoon. I spent a few hours here last Sunday and was completely rejuvenated. The gardens are well-maintained with lush greenery and blooming flowers everywhere. There are plenty of benches to sit and read a book or just watch people pass by. The olive groves and the large reflective pool add to the tranquility of the place. The walking paths are wide and clean, making it a great place for a leisurely stroll or a jog. I also noticed several families having picnics and children playing in the designated areas. It's a wonderful escape from the hustle and bustle of the city.",
+    "tags": ["Marakesh","park", "nature", "outdoors"]
+  },
+  {
+    "id_review": 3,
+    "user": {
+      "id_user": 3,
+      "name": "Fatima Maaroufi",
+      "profile": "https://img.freepik.com/free-vector/fashionable-avatar-girl_24877-81624.jpg?t=st=1719253512~exp=1719257112~hmac=511846f5f357b103ed7379611f6926cd7aec6d5efa31148a7b984543b8f5bbfd&w=740"
+    },
+    "review": "Jemaa el-Fnaa square in Marrakesh is a must-see. Bustling with activity, it's a feast for the senses! From snake charmers and street performers to food stalls and market vendors, there's always something happening here. The sights, sounds, and smells are overwhelming in the best way possible. I recommend visiting in the evening when the square really comes alive with music and dancing. Be sure to try some of the local street food – the kebabs and fresh orange juice are delicious. It's an experience that captures the vibrant spirit of Marrakesh.",
+    "tags": ["cultural", "marketplace", "historical"]
+  },
+  {
+    "id_review": 4,
+    "user": {
+      "id_user": 4,
+      "name": "Omar Benchekroun",
+      "profile": "https://img.freepik.com/free-vector/purple-man-with-blue-hair_24877-82003.jpg?w=740&t=st=1719252655~exp=1719253255~hmac=b55efa8f4788c8d14b97087ec9a2a7dc1d8762edbebca5dbf37c8f41c07ec99f"
+    },
+    "review": "The Chefchaouen (the Blue Pearl) is a beautiful town with stunning blue-washed buildings. Perfect for a peaceful escape. Walking through the narrow streets, you feel like you've stepped into a different world. The blue walls and doors are incredibly picturesque, making it a photographer's dream. The local shops sell unique handmade crafts and souvenirs, and the cafes offer a chance to relax with a cup of mint tea while taking in the views. It's a serene and charming place that feels a million miles away from the chaos of city life.",
+    "tags": ["scenic", "relaxing", "photography"]
+  },
+  {
+    "id_review": 5,
+    "user": {
+      "id_user": 3,
+      "name": "Fatima Maaroufi",
+      "profile": "https://img.freepik.com/free-vector/fashionable-avatar-girl_24877-81624.jpg?t=st=1719253512~exp=1719257112~hmac=511846f5f357b103ed7379611f6926cd7aec6d5efa31148a7b984543b8f5bbfd&w=740"
+    },
+    "review": "Hassan II Mosque in Casablanca is a masterpiece of Moroccan architecture. The intricate details are breathtaking. The mosque sits right on the coast, offering stunning views of the Atlantic Ocean. The minaret, which is the tallest in the world, is an impressive sight, especially when illuminated at night. The interior is just as awe-inspiring, with beautifully crafted tiles, carvings, and chandeliers. Guided tours are available and highly recommended to learn more about the history and significance of this magnificent structure. It's a must-visit for anyone interested in architecture and culture.",
+    "tags": ["religious", "architectural", "impressive"]
+  }
+]

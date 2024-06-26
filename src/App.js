@@ -1,50 +1,60 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { Suspense, lazy, memo, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Suspense, lazy, useMemo } from "react";
 import { useRecoilValue } from "recoil";
 import { User } from "./recoil_state";
-import { useNavigate } from "react-router-dom";
 
 const Admin = lazy(() => import("./pages/Admin"));
 const Client = lazy(() => import("./pages/Client"));
 
 function App() {
-  const UserValue = useRecoilValue(User)
-  const [UserClient , setClient]=useState({})
-  const goAdmin = useNavigate();
-  useEffect(()=>{
-    setClient(UserValue)
-  },[UserValue])
-  const isAdmin = isUserAdmin(UserClient)
-  if (isAdmin){
-    goAdmin('/admin')
-  }
-  // const Location = useLocation().pathname;
-  // const isAdmin = isUserAdmin(ClientUser);
-  
-  // const isAdmin = memo(()=>)
+  const getUser =useRecoilValue(User);
+  // useEffect(()=>{
+  //   setClient(getUser)
+  // },[getUser])
+
+
+  const isAdmin = useMemo(()=>getUser.isAdmin===true,[getUser])
+  // useEffect(()=>{
+  //   if(Object.keys(getUser).length===1){
+  //     console.log('cool')
+  //   }else{
+  //     setClient(getUser)
+  //   }
+  // },[getUser])
+
+
+  // useEffect(()=>{
+  //   if()
+  // })
+  // useEffect(()=>{
+  //   if (Object.keys(getUser).length>1){
+  //     startTransition(()=>{
+  //       setClient(getUser)
+  //     })
+      
+  //   }
+  //   else {startTransition(()=>{setClient({isAdmin:false})})} 
+  // },[getUser])
+  console.log(isAdmin)
+
+
+ 
   return (
     
       <div className="App">
+
         {isAdmin ? (
-          <Admin />
+          
+              <Suspense><Admin user={getUser} /> </Suspense> 
         ) : (
-          <Suspense>
-            <Client />
-          </Suspense>
+          
+            <Suspense > <Client/> </Suspense>
         )}
+        
       </div>
     
   );
 }
-function isUserAdmin(params) {
-  // if(params)
-  const Admin = params.isAdmin;
-  if (Admin === true) {
-    return true;
-  } else return false;
-}
-
 export default App;

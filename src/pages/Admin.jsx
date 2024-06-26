@@ -6,8 +6,9 @@ import { Route, Routes } from "react-router-dom";
 
 import AddCity from "./Admin/AddCity";
 import AddPlace from "./Admin/AddPlace";
+import Dashboard from "./Admin/Dashboard";
 
-function Admin() {
+function Admin(props) {
   return (
     <div id="page-top">
       <div className="wrapper">
@@ -16,7 +17,9 @@ function Admin() {
           <div id="content">
             <Topbar />
             <div className="container-fluid">
+              <h1> {Object.keys(props.user).length>1? props.user.email : 'nothing'} </h1>
               <Routes>
+                <Route path="/admin/dashboard" element={<Dashboard/>}/>
                 <Route path="/admin/addCity" element={<AddCity />} />
                 <Route path="/admin/addPlace" element={<AddPlace />} />
               </Routes>

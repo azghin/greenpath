@@ -58,21 +58,21 @@ function Curency() {
 
               <ul>
                 <li>
-                  <strong>1 USD</strong> is equal to around{" "}
+                  <strong>1 USD</strong> is equal to around
                   <strong>
                     {(currencyData.rates.MAD * 1).toFixed(2)} Dirham
-                  </strong>{" "}
+                  </strong>
                   (MAD).
                 </li>
                 <li>
-                  <strong>1 EUR</strong> is equal to around{" "}
+                  <strong>1 EUR</strong> is equal to around
                   <strong>
                     {(
                       (currencyData.rates.USD / currencyData.rates.EUR) *
                       currencyData.rates.MAD
-                    ).toFixed(2)}{" "}
+                    ).toFixed(2)}
                     Moroccan Dirham
-                  </strong>{" "}
+                  </strong>
                   (MAD).
                 </li>
               </ul>

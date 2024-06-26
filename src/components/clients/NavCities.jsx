@@ -65,14 +65,14 @@ function NavCities() {
           <ul className="scroll-container">
             {filteredCities.map((city) => (
               <Link to={`/client/city/${city.name}`} key={`${city.name}`}>
-                {" "}
+                
                 <li
                   id={`city-${city.name}`}
                   onMouseEnter={() => handleHover(city)}
                   onMouseLeave={outHover}
                 >
-                  {" "}
-                  <h3>{city.name}</h3>{" "}
+                  
+                  <h3>{city.name}</h3>
                 </li>
               </Link>
             ))}

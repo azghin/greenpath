@@ -3,15 +3,16 @@ function VisitedCard(props) {
   return (
     <div className="col-lg-4 col-sm-12 vcard">
       <div className="card border-0">
-        <div className="card-header border-0">
-          <h3>{props.city}</h3>
+        <div className="">
+            <img src={props.city.img} alt="City" className="card-img-top"/>
+          </div>
+          <div className=" border-0">
+          <h3>{props.city.name}</h3>
         </div>
         <div className="card-body border-0">
-          <div className="img ">
-            <img src="" alt="City" />
-          </div>
+          
           <div className="content">
-            <p>content</p>
+            <p>{props.city.desc}</p>
           </div>
         </div>
         <div className="card-footer">
