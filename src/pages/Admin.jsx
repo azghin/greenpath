@@ -7,6 +7,8 @@ import { Route, Routes } from "react-router-dom";
 import AddCity from "./Admin/AddCity";
 import AddPlace from "./Admin/AddPlace";
 import Dashboard from "./Admin/Dashboard";
+import AllCities from "./Admin/AllCities";
+import AllPlaces from "./Admin/AllPlaces";
 
 function Admin(props) {
   return (
@@ -22,6 +24,8 @@ function Admin(props) {
                 <Route path="/admin/dashboard" element={<Dashboard/>}/>
                 <Route path="/admin/addCity" element={<AddCity />} />
                 <Route path="/admin/addPlace" element={<AddPlace />} />
+                <Route path="/admin/allcities" element={<AllCities/>}/>
+                <Route path="/admin/allplaces" element={<AllPlaces/>}/>
               </Routes>
             </div>
           </div>
