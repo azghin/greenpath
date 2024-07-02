@@ -57,7 +57,7 @@ function NavigationMap(props) {
           </div>
           <div className="mapPlaces">
             <Suspense>
-              <Gmap data={defaultCenter} />
+              <Gmap data={defaultCenter} isCity={true} />
             </Suspense>
 
           </div>

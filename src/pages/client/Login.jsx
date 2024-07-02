@@ -27,7 +27,8 @@ export default function Login() {
              })     
         
         if (newLogIn.isAdmin === true) {
-          goRoute("/admin/dashboard");
+          goRoute("/admin");
+          goRoute(0);
         } else {
           goRoute("/");
         }

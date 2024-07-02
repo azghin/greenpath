@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom"
-import { useRecoilValue } from "recoil"
+import { useRecoilState } from "recoil"
 import { User } from "../../recoil_state"
+import { useNavigate } from "react-router-dom"
 function Topbar(){
-    const getUser = useRecoilValue(User)
+    const [getUser,setUser] = useRecoilState(User)
+    const goroute = useNavigate()
+    const logOut = ()=>{
+        setUser({isAdmin:false})
+        goroute('/')
+    }
     return (
 
    
@@ -18,10 +23,9 @@ function Topbar(){
             <div className="topbar-divider d-none d-sm-block"></div>
 
             <li className="nav-item dropdown no-arrow">
-                <Link className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button onClick={logOut} className="nav-link dropdown-toggle"  id="userDropdown" >
                     <span className="mr-2 d-none d-lg-inline text-gray-600 small">{getUser.email}</span>
-                </Link>
+                </button>
 
             </li>
 

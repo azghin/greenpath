@@ -19,9 +19,8 @@ function Admin(props) {
           <div id="content">
             <Topbar />
             <div className="container-fluid">
-              <h1> {Object.keys(props.user).length>1? props.user.email : 'nothing'} </h1>
               <Routes>
-                <Route path="/admin/dashboard" element={<Dashboard/>}/>
+                <Route path="/admin" element={<Dashboard/>}/>
                 <Route path="/admin/addCity" element={<AddCity />} />
                 <Route path="/admin/addPlace" element={<AddPlace />} />
                 <Route path="/admin/allcities" element={<AllCities/>}/>

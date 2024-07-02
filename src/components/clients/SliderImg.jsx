@@ -45,7 +45,7 @@ function SliderImg() {
                   <h1>
                     {image.city}
                   </h1>
-                  <p>Lorem ipsum ...</p>
+                  <p>{image.desc}</p>
                 </div>
                 </div>
                 

@@ -10,25 +10,25 @@ function PlaceDetails(props) {
     <section id="place-details">
       <div className="container">
         <div className="row">
-          <div className="col-6">
-            <h2>{props.data.description}</h2>
-          </div>
-          <div className="col-6"> map</div>
-        </div>
-        {!detailsExist
+          <div className="col-8">
+           
+            {!detailsExist
           ? null
           : details.map((obj) => {const key=Object.keys(obj)[0] ;const valKeys= Object.keys(obj[key]);console.log(valKeys);; return(
-              <div className="row">
-                <div className="col-8"> 
+              <>
+                <div className="row"> 
                     <h2>{key} </h2>
                     <ul>
-                        {valKeys.map((keyy,indix)=><li><strong>{keyy}</strong>  {obj[key][keyy]}</li>)}
+                        {valKeys.map((keyy,indix)=><li> <span>  <strong>{keyy}</strong> </span> {obj[key][keyy]}</li>)}
                     </ul>
                 </div>
-                <div className="col-4"> {obj.svg}</div>
-              </div>
+              </>
             )})}
-      </div>
+          </div>
+        
+          <div className="col-4 img"><img src={props.data.img} alt=""  className="img-fluid"/></div>
+
+      </div></div>
     </section>
   );
 }

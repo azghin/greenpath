@@ -20,7 +20,7 @@ function HStory() {
       {!isReviewsEmpty ? null : (
         <div className="container">
           <div className="story-desc centertext">
-            <h3 className="section-title">Explore ppl stories</h3>
+            <h3 className="section-title">Witness Morocco Through Other Eyes</h3>
           </div>
           <div className="row cards_review_home">
             <div className="col-9">

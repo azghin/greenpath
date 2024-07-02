@@ -3,7 +3,7 @@ import PlaceDetails from "../../components/clients/PlaceDetails";
 import { useEffect, useState } from "react";
 import { Places } from "../../recoil_state";
 import { useRecoilValue } from "recoil";
-
+import Gmap from '../../layouts/clients/Gmap'
 function Place() {
   const allPlaces = useRecoilValue(Places);
   const [defaultCenter, setDefaultCenter] = useState({});
@@ -23,17 +23,17 @@ function Place() {
   return (
     <>
       <section id="place" className="clearfix">
-        <div className="container">
-          <div className="row">
-            
-            <div className="col-6">
+        <div className="container h-100">
+          <div className="row h-100">
+            <div className="col-6 p-text">
               <h2>
-                you're now navigating <span> {defaultCenter.city}</span> <br />{" "}
-                in <span>{defaultCenter.place} </span> you'll find{" "}
+                {/* you're now navigating <span> {defaultCenter.city}</span> <br />{" "}
+                in <span>{defaultCenter.place} </span> you'll find{" "} */}
+                {defaultCenter.description}
               </h2>
             </div>
             <div className="col-6 p-2">
-              <img src={defaultCenter.img} alt=""  className="img-fluid"/>
+              <Gmap data={defaultCenter } isPlace={true} />
             </div>
           </div>
         </div>

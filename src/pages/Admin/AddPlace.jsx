@@ -1,11 +1,52 @@
-import { useRecoilValue } from "recoil";
-import { CitiesL } from "../../recoil_state";
+import { useRecoilValue,useRecoilState } from "recoil";
+import { CitiesL,Places } from "../../recoil_state";
+import { useState } from "react";
 function AddPlace() {
+  const [getPlaces,setPlaces]=useRecoilState(Places)
   const allCities = useRecoilValue(CitiesL);
+  const [newPlace ,setNewPlace]=useState({
+    place:'',
+    id:getPlaces.length+1,
+    city:'',
+    description:'',
+    lat:null,
+    lng:null,
+    zoom:16,
+    img:'',
+    details:[]
+  })
+  const handleChange =(event)=>{
+    const {name,value}=event.target;
+    if(name==='lat'||name==='lng'){
+      setNewPlace({...newPlace,
+      [name]:Number(value)
+    })
+    }else{
+      setNewPlace({...newPlace,
+        [name]:value
+      })
+    }
+    
+  }
+
+  const handleSubmit=()=>{
+    setPlaces([...getPlaces,newPlace])
+    setNewPlace({
+      place:'',
+      id:getPlaces.length+1,
+      city:'',
+      description:'',
+      lat:null,
+      lng:null,
+      zoom:16,
+      img:'',
+      details:[]
+    })
+  }
   return (
     <div className="container">
       <h1>add places</h1>
-      <form>
+
         <div className="mb-3 row">
           <label for="inputName" className="col-4 col-form-label">
             Place name
@@ -14,9 +55,10 @@ function AddPlace() {
             <input
               type="text"
               className="form-control"
-              name="inputName"
+              name="place"
               id="inputName"
-              placeholder="Name"
+              value={newPlace.place}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -24,10 +66,10 @@ function AddPlace() {
           <label for="" class="form-label">
             City
           </label>
-          <select class="form-select form-select-lg" name="" id="">
+          <select class="form-select form-select-lg" name="city" id="">
             <option selected>Select one</option>
             {allCities.map((obj) => (
-              <option value="">{obj.name}</option>
+              <option onClick={handleChange} name="city" value={obj.name}>{obj.name}</option>
             ))}
           </select>
         </div>
@@ -38,11 +80,12 @@ function AddPlace() {
           </label>
           <div className="col-8">
             <input
-              type="text"
+              type="number"
               className="form-control"
-              name="inputName"
-              id="inputName"
-              placeholder="Name"
+              name="lat"
+              id="lat"
+              value={newPlace.lat}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -52,11 +95,12 @@ function AddPlace() {
           </label>
           <div className="col-8">
             <input
-              type="text"
+              type="number"
               className="form-control"
-              name="inputName"
+              name="lng"
               id="inputName"
-              placeholder="Name"
+              value={newPlace.lng}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -68,9 +112,10 @@ function AddPlace() {
             <input
               type="text"
               className="form-control"
-              name="inputName"
+              name="description"
               id="inputName"
-              placeholder="Name"
+              value={newPlace.description}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -82,20 +127,21 @@ function AddPlace() {
             <input
               type="text"
               className="form-control"
-              name="inputName"
+              name="img"
               id="inputName"
-              placeholder="Name"
+              value={newPlace.img}
+              onChange={handleChange}
             />
           </div>
         </div>
         <div className="mb-3 row">
           <div className="offset-sm-4 col-sm-8">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
               Action
             </button>
           </div>
         </div>
-      </form>
+     
     </div>
   );
 }

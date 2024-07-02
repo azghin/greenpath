@@ -63,7 +63,7 @@ function App() {
           <Route path="cities/:name" element={<City/>} />
           <Route path="cities/:name/:place" element={<Place/>} />
           <Route path="/login" element={<Login/>}/>
-          <Route path="profile" element ={<Profile/>}/>
+          <Route path="/profile" element ={<Profile/>}/>
           <Route path="*" element={<NotFound/>} />
         </Route>
         

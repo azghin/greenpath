@@ -38,8 +38,6 @@ function Home() {
       <Suspense fallback={<div>loading</div>}>
         <HStory />
       </Suspense>
-
-      <h1>advices</h1>
     </>
   );
 }

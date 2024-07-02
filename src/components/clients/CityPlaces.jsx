@@ -71,7 +71,7 @@ function CityPlaces() {
             </div>
 
             <div className="mapPlaces">
-                {typeof DefaultCity.name === 'string' ? <Gmap data={DefaultCenter} /> : <h2>Loading</h2>}
+                {typeof DefaultCity.name === 'string' ? <Gmap data={DefaultCenter} isCity={true}/> : <h2>Loading</h2>}
 
             </div>
             </div>

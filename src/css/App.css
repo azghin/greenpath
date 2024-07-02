@@ -819,26 +819,48 @@ section .section-title{
 /*Place */
 #place{
   width: 100%;
-  padding: 200px 0 120px 0;
-}
-#place .place-svg{
-  width: 50%;
-  float: right;
+  height: 100vh;
+  background: url('../img/blop-bg.svg') center bottom no-repeat ;
+  background-size: cover;
+  padding: 60px 0 60px 0;
 }
 
-#place .placeIntro{
-  width: 50%;
-  float: left;
+#place .p-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#place .placeIntro h2{
+
+#place  h2{
   margin-bottom: 40px;
   font-size: 48px;
   font-weight: 700;
 }
-#place .placeIntro h2 span{
+#place-details{
+  background: url('../img/blob-scene-haikei.svg') center top no-repeat;
+  background-size: cover;
+  padding-bottom: 60px;
+  height: 100%;
+  max-height: 60vh;
+}
+#place-details li span{
+  color: #388E3C;
+}
+#place-details .img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#place  span{
   color: #388E3C;
   text-decoration: underline;
 }
+#place .googlemap{
+  box-shadow: 10px 10px black;
+  height: 90%;
+  width: 90%;
+}
+
 
 
 
@@ -847,23 +869,51 @@ section .section-title{
 #blog{
   width: 100%;
   padding: 120px 0 60px 0;
-  display: flex;
+  background: url('../img/circle-scatter-haikei\(1\).svg') center top no-repeat  ;
+  background-size: cover;
+
+}
+#blog button{
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 0 20px 0 0;
+  color: #fff;
+  background: #388E3C;
+  border: 2px solid #388E3C;
 }
 #blog .blog-img{
-  width: 50%;
-  float: right;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#blog .blog-img img{
-  width: 70%;
-
+#blog .blogHeader h2{
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
 }
+#blog .blogHeader h2 span{
+  color: #8BC34A;
+  text-decoration: underline;
+}
+#blog .blog-input{
+  padding: 40px 0 40px 0;
+}
+#blog .blog-input h3{
+  font-size: 35px;
+  font-weight: 500;
+}
+#blog .blog-input a{
+  text-decoration: underline;
+  color:#8BC34A ;
+}
+
 #blog .blog-texts{
-  width: 50%;
-  height: 100%;
-  float: left;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -892,6 +942,7 @@ section .section-title{
   padding: 120px 0 120px 0;
 
 }
+
 /*end login*/
 /*scrool container*/
 .scroll-container{
